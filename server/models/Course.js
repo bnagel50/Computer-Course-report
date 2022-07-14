@@ -1,4 +1,4 @@
-const { Schema, model } = require ('mongoose');
+const { Schema, model } = require('mongoose');
 
 const courseSchema = new Schema({
     cost: {
@@ -29,9 +29,9 @@ const courseSchema = new Schema({
 ],
     reviews:[
         {
-            user: {
-                type:mongoose.Schema.ObjectId,
-                ref:"User",
+            user_id: {
+                type: mongoose.Schema.ObjectId,
+                ref: "User",
                 required: true,
             },
             name:{
