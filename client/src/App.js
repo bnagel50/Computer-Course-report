@@ -6,11 +6,11 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Profile from './pages/Profile';
-import Signup from './pages/Signup';
+// import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Header from './components/Header';
 
@@ -43,7 +43,7 @@ function App() {
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
           <div className="container">
-            <Routes>
+            <Switch>
               <Route 
                 path="/" 
                 element={<Home />}
@@ -52,10 +52,10 @@ function App() {
                 path="/login" 
                 element={<Login />}
               />
-              <Route 
+              {/* <Route 
                 path="/signup" 
                 element={<Signup />}
-              />
+              /> */}
               <Route 
                 path="/me" 
                 element={<Profile />}
@@ -64,9 +64,9 @@ function App() {
                 path="/profiles/:profileId"
                 element={<Profile />}
               />
-            </Routes>
+            </Switch>
           </div>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </Router>
     </ApolloProvider>
