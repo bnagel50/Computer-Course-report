@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const reviewSchema = require('./Reviews')
 
 const courseSchema = new Schema({
     school: {
@@ -21,59 +22,26 @@ const courseSchema = new Schema({
         type: String,
         required: true,
     },
-    numOfReviews: {
-        type: Number,
-        default: 0
-    },
     curriculum: [
         {
-        type: String,
-        trim: true,
-    },
-],
-    reviews: [
-        {
-            name: {
-                type: Schema.Types.String,
-                ref: "User",
-                required: true,
-            },
-            comments: {
-                type: String,
-                required: true,
-            },
-            // name:{
-            //     type: String,
-            //     required: true,
-            // },
-            // curriculum: {
-            //     type: Number,
-            //     required: true,
-            // },
-            // instructors: {
-            //     type: Number,
-            //     required: true
-            // },
-            // overallExperience:{
-            //     type: Number,
-            //     required: true,
-            // },
-            // jobAssistance: {
-            //     type: Number,
-            //     required: true,
-            // },
-            employment: {
-                type: String,
-                required: true,
-            },
-            time:{
-                type: Date,
-                default: Date.now()
-            },
+            type: String,
+            trim: true,
+            required: true
         },
     ],
+    reviews: [reviewSchema],
 
+},
+{
+    toJSON: {
+        virtuals: true
+    },
+    id: false
 });
+
+courseSchema.virtual('reviewCount').get(function(){
+    return this.reviews.length;
+})
 
 const Course = model('Course', courseSchema);
 
