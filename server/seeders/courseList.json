@@ -1,0 +1,15 @@
+[
+    {
+        "cost": "10000",
+        "length": "12",
+        "avgRating": "4",
+        "location": "Online",
+        "numOfReviews": "1",
+        "curriculum": ["Python", "Angular"],
+        "reviews": [{
+            "name": "Austin Jones",
+            "employment": "Yes",
+            "comments": "It was a challenging course, but I learned a lot and found a job in the field." 
+        }]
+    }
+]

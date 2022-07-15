@@ -1,4 +1,4 @@
-const { Schema, model } = require ('mongoose');
+const { Schema, model } = require('mongoose');
 
 const courseSchema = new Schema({
     cost: {
@@ -27,17 +27,21 @@ const courseSchema = new Schema({
         trim: true,
     },
 ],
-    reviews:[
+    reviews: [
         {
-            user: {
-                type:mongoose.Schema.ObjectId,
-                ref:"User",
+            name: {
+                type: Schema.Types.ObjectId,
+                ref: "User",
                 required: true,
             },
-            name:{
+            comments: {
                 type: String,
                 required: true,
             },
+            // name:{
+            //     type: String,
+            //     required: true,
+            // },
             // curriculum: {
             //     type: Number,
             //     required: true,
