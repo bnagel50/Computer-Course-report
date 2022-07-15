@@ -9,7 +9,7 @@
         "reviews": [{
             "name": "Austin Jones",
             "employment": "Yes",
-            "thoughts": "It was a challenging course, but I learned a lot and found a job in the field." 
+            "comments": "It was a challenging course, but I learned a lot and found a job in the field." 
         }]
     }
 ]

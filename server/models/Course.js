@@ -34,7 +34,7 @@ const courseSchema = new Schema({
                 ref: "User",
                 required: true,
             },
-            thoughts: {
+            comments: {
                 type: String,
                 required: true,
             },
