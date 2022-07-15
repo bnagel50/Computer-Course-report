@@ -29,15 +29,19 @@ const courseSchema = new Schema({
 ],
     reviews: [
         {
-            user: {
+            name: {
                 type: Schema.Types.ObjectId,
                 ref: "User",
                 required: true,
             },
-            name:{
+            thoughts: {
                 type: String,
                 required: true,
             },
+            // name:{
+            //     type: String,
+            //     required: true,
+            // },
             // curriculum: {
             //     type: Number,
             //     required: true,
