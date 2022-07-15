@@ -52,7 +52,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
-          <Navbar bg="dark" variant="dark">
+          <Navbar fixed='top' bg="dark" variant="dark">
           {/* <Container fixed="top"> */}
                 {/* <LinkContainer to="/"> */}
                 
@@ -62,19 +62,18 @@ function App() {
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
-            className="me-auto my-2 my-lg-0"
+            className="me-auto my-2 my-lg-0 text-white "
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <NavDropdown title="Browse Courses" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="/">Full stack</NavDropdown.Item>
+          </Nav>
+          <NavDropdown title="Browse Courses" id="navbarScrollingDropdown" className='text-white'>
+              <NavDropdown.Item href="/" >Full stack</NavDropdown.Item>
               <NavDropdown.Item href="/">
                 UX/UI
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="/write-review">Write Reviews</Nav.Link>
-           
-          </Nav>
+            <Nav.Link href="/write-review" className='text-white'>Write Reviews</Nav.Link>
           <Form className="d-flex">
             <Form.Control
               type="search"
@@ -84,12 +83,11 @@ function App() {
             />
             {/* <Button variant="outline-success">Search</Button> */}
           </Form>
-          <Nav.Link href="/login">Login</Nav.Link>
-            <Nav.Link href="/signup">Signup</Nav.Link>
+          <Nav.Link href="/login" className='text-white'>Login</Nav.Link>
+            <Nav.Link href="/signup" className='text-white'>Signup</Nav.Link>
         </Navbar.Collapse>
               {/* </Container> */}
           </Navbar>
-          
         </div>
       </Router>
       <LandingPage/>

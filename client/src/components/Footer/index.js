@@ -3,6 +3,7 @@ import "./Footer.css";
 
 function Footer() {
   return (
+    <div className="main-container">
     <div className="main-footer">
       <div className="container">
         <div className="row">
@@ -42,6 +43,7 @@ function Footer() {
           </p>
         </div>
       </div>
+    </div>
     </div>
   );
 }
