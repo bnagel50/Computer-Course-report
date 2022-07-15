@@ -1,8 +1,8 @@
 .main-home {
-    min-height: 93vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url("../background1.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../background1.jpg");
     background-position: center;
     background-size: cover;
 }
@@ -10,4 +10,8 @@
 .h1,h2{
     color: white;
     opacity: 100%;
+}
+
+h2 {
+    box-shadow: 5rem;
 }
