@@ -1,28 +1,49 @@
-import React from 'react';
-import { Container, Row } from 'react-bootstrap/Container';
-// import { useLocation, useNavigate } from 'react-router-dom';
+import React from "react";
+import "./Footer.css";
 
-const Footer = () => {
-  // const location = useLocation();
-  // const navigate = useNavigate();
+function Footer() {
   return (
-    <footer>
-      style={{
-        widht: "100%",
-        position: "relative",
-        bottom: 0,
-        display: "flex",
-        justifyContent: "center"
-      }} 
-
-      <Container>
-        <Row>
-          <col className='text-center py-3'>Copyright &copy; NO BS CS</col>
-        </Row>
-      </Container>
-
-    </footer>
+    <div className="main-footer">
+      <div className="container">
+        <div className="row">
+          {/* Column1 */}
+          <div className="col">
+            <h4>HT ASSASINS</h4>
+            <h1 className="list-unstyled">
+              <li>555-555-5555</li>
+              <li>Columbus, Ohio</li>
+              <li>123 Street South North</li>
+            </h1>
+          </div>
+          {/* Column2 */}
+          <div className="col">
+            <h4>Contact Us!</h4>
+            <ui className="list-unstyled">
+              <li>Fake email</li>
+              <li>Fake Other Thing</li>
+              <li>More Fake stuff</li>
+            </ui>
+          </div>
+          {/* Column3 */}
+          <div className="col">
+            <h4>WELL ANOTHER COLUMN</h4>
+            <ui className="list-unstyled">
+              <li>Place Holder</li>
+              <li>Place Holder</li>
+              <li>Place Holder</li>
+            </ui>
+          </div>
+        </div>
+        <hr />
+        <div className="row">
+          <p className="col-sm">
+            &copy;{new Date().getFullYear()} HT-ASSASINS | All rights reserved |
+            Terms Of Service | Privacy
+          </p>
+        </div>
+      </div>
+    </div>
   );
-};
+}
 
 export default Footer;

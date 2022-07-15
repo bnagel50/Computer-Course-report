@@ -19,9 +19,10 @@ import Container from 'react-bootstrap/Container';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Nav from 'react-bootstrap/Nav';
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom';
+// import Button from 'react-bootstrap/Button';
+// import { Link } from 'react-router-dom';
 // import Footer from './components/Footer';
+import Footer from './components/Footer';
 
 
 const httpLink = createHttpLink({
@@ -115,6 +116,7 @@ function App() {
           </Header>
         </div>
       </Router>
+      <Footer/>
     </ApolloProvider>
   );
 }
