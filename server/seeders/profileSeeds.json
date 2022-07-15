@@ -3,5 +3,40 @@
         "name": "Austin Jones",
         "email": "austinjones123@gmail.com",
         "password": "secure"
+    },
+    {
+        "name": "Justin Ames",
+        "email": "justinames321@gmail.com",
+        "password": "password"
+    },
+    {
+        "name": "Charles Adams",
+        "email": "charlie111@gmail.com",
+        "password": "thepww"
+    },
+    {
+        "name": "Amanda Brown",
+        "email": "brown100@gmail.com",
+        "password": "pwpwpw"
+    },
+    {
+        "name": "Haley James",
+        "email": "hj123@gmail.com",
+        "password": "mypass"
+    },
+    {
+        "name": "Paul Williams",
+        "email": "pw123456@gmail.com",
+        "password": "secret"
+    },
+    {
+        "name": "Louis Pond",
+        "email": "pond33@gmail.com",
+        "password": "shhhhh"
+    },
+    {
+        "name": "Hank Johnson",
+        "email": "hank99@gmail.com",
+        "password": "silence"
     }
 ]

@@ -6,10 +6,78 @@
         "location": "Online",
         "numOfReviews": "1",
         "curriculum": ["Python", "Angular"],
-        "reviews": [{
-            "name": "Austin Jones",
-            "employment": "Yes",
-            "comments": "It was a challenging course, but I learned a lot and found a job in the field." 
-        }]
+        "reviews": [
+            {
+                "name": "Austin Jones",
+                "employment": "Yes",
+                "comments": "It was a challenging course, but I learned a lot and found a job in the field." 
+            }
+        ]
+    },
+    {
+        "cost": "12000",
+        "length": "16",
+        "avgRating": "5",
+        "location": "Columbus",
+        "numOfReviews": "2",
+        "curriculum": ["React", "JavaScipt", "NoSQL"],
+        "reviews": [
+            {
+                "name": "Austin Jones",
+                "employment": "Yes",
+                "comments": "It was a challenging course, but I learned a lot and found a job in the field." 
+            },
+            {
+                "name": "Austin Jones",
+                "employment": "Yes",
+                "comments": "It was a challenging course, but I learned a lot and found a job in the field."
+            }
+        ]
+    },
+    {
+        "cost": "12000",
+        "length": "16",
+        "avgRating": "5",
+        "location": "Akron",
+        "numOfReviews": "2",
+        "curriculum": ["React", "JavaScipt", "NoSQL"],
+        "reviews": [
+            {
+                "name": "Austin Jones",
+                "employment": "Yes",
+                "comments": "It was a challenging course, but I learned a lot and found a job in the field." 
+            },
+            {
+                "name": "Austin Jones",
+                "employment": "Yes",
+                "comments": "It was a challenging course, but I learned a lot and found a job in the field."
+            }
+        ]
+    },
+    {
+        "cost": "12000",
+        "length": "16",
+        "avgRating": "5",
+        "location": "Columbus",
+        "numOfReviews": "3",
+        "curriculum": ["React", "JavaScipt", "NoSQL"],
+        "reviews": [
+            {
+                "name": "Austin Jones",
+                "employment": "Yes",
+                "comments": "It was a challenging course, but I learned a lot and found a job in the field." 
+            },
+            {
+                "name": "Austin Jones",
+                "employment": "Yes",
+                "comments": "It was a challenging course, but I learned a lot and found a job in the field."
+            },
+            {
+                "name": "Austin Jones",
+                "employment": "Yes",
+                "comments": "It was a challenging course, but I learned a lot and found a job in the field."
+            }
+        ]
     }
+
 ]
