@@ -1,9 +1,13 @@
 const { Schema, model } = require('mongoose');
 
 const courseSchema = new Schema({
+    school: {
+        type: String,
+        required: [true, 'Please enter the name of the course']
+    },
     cost: {
         type: String,
-        required: [true, 'Please enter the cost of the course!']
+        required: [true, 'Please enter the cost of the course']
     },
     length: {
         type: Number,
@@ -30,7 +34,7 @@ const courseSchema = new Schema({
     reviews: [
         {
             name: {
-                type: Schema.Types.ObjectId,
+                type: Schema.Types.String,
                 ref: "User",
                 required: true,
             },

@@ -20,14 +20,14 @@
         "password": "pwpwpw"
     },
     {
-        "name": "Haley James",
-        "email": "hj123@gmail.com",
-        "password": "mypass"
-    },
-    {
         "name": "Paul Williams",
         "email": "pw123456@gmail.com",
         "password": "secret"
+    },
+    {
+        "name": "Haley James",
+        "email": "hj123@gmail.com",
+        "password": "mypass"
     },
     {
         "name": "Louis Pond",
