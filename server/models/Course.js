@@ -27,10 +27,10 @@ const courseSchema = new Schema({
         trim: true,
     },
 ],
-    reviews:[
+    reviews: [
         {
-            user_id: {
-                type: mongoose.Schema.ObjectId,
+            user: {
+                type: Schema.Types.ObjectId,
                 ref: "User",
                 required: true,
             },
