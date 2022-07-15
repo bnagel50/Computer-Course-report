@@ -3,15 +3,38 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
   type User {
     _id: ID
-    name: String
-    email: String
-    password: String
-    skills: [String]!
+    name: String!
+    email: String!
+    password: String!
+
   }
 
   type Auth {
     token: ID!
     profile: Profile
+  }
+
+  type Course {
+    _id: ID!
+    cost: String
+    length: Number
+    avgRating: Number
+    location: String
+    numOfReviews: Number
+    curriculum: String 
+    reviews: [review]
+
+  }
+
+  type Review {
+    _id: ID!
+    name: String
+    # curriculum: Number
+    # instructors: Number
+    # overallExperience: Number
+    # jobAssistance: Number
+    employment: String
+    time: Date
   }
 
   type Query {
@@ -21,7 +44,10 @@ const typeDefs = gql`
     me: Profile
   }
 
-  type Review
+  
+
+
+
 
   type Mutation {
     addProfile(name: String!, email: String!, password: String!): Auth
