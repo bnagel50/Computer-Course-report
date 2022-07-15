@@ -1,15 +1,15 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
-const { signToken } = require('../utils/auth');
+const { Course, User } = require('../../models');
+const { signToken } = require('../../utils/auth');
 
 const resolvers = {
   Query: {
-    users: async () => {
-      return User.find();
+    courses: async () => {
+      return Course.find();
     },
 
-    user: async (parent, { userId }) => {
-      return User.findOne({ _id: userId });
+    course: async (parent, { courseId }) => {
+      return Course.findOne({ _id: courseId });
     },
     // By adding context to our query, we can retrieve the logged in user without specifically searching for them
     me: async (parent, args, context) => {
