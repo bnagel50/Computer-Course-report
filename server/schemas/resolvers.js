@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
+const { User, Course } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -18,6 +18,14 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
+
+    courses: async() => {
+      return Course.find().sort();
+    },
+
+    course: async(parent, { courseId }) => {
+      return Course.findOne({ _id: courseId });
+    }
   },
 
   Mutation: {
@@ -53,6 +61,19 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
+    addCourse: async (parent, {courseData}) => {
+      console.log('Made it here')
+      const course = await Course.create(courseData);
+      return { course };
+    },
+    removeCourse: async (parent, args, context) => {
+      if (context.user) {
+        return Course.findOneAndDelete({ _id: args.course_id})
+      }
+    },
+    addReview: async (parent, args, context) => {
+
+    }
   },
 };
 
