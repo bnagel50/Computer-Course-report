@@ -1,0 +1,13 @@
+.main-home {
+    min-height: 93vh;
+    display: flex;
+    align-items: center;
+    background-image: url("../background1.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.h1,h2{
+    color: white;
+    opacity: 100%;
+}

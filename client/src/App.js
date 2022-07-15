@@ -8,13 +8,13 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Home from './pages/Home';
-import Profile from './pages/Profile';
+// import Home from './pages/Home';
+// import Profile from './pages/Profile';
 // import Signup from './pages/Signup';
-import Login from './pages/Login';
-import Header from './components/Header';
+// import Login from './pages/Login';
+// import Header from './components/Header';
 import Navbar from 'react-bootstrap/Navbar';
-import Container from 'react-bootstrap/Container';
+// import Container from 'react-bootstrap/Container';
 // import { LinkContainer }from "react-router-bootstrap";
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Nav from 'react-bootstrap/Nav';
@@ -23,6 +23,7 @@ import Form from 'react-bootstrap/Form';
 // import { Link } from 'react-router-dom';
 // import Footer from './components/Footer';
 import Footer from './components/Footer';
+import LandingPage from './components/LandingPage';
 
 
 const httpLink = createHttpLink({
@@ -52,10 +53,10 @@ function App() {
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
           <Navbar bg="dark" variant="dark">
-          <Container>
+          {/* <Container fixed="top"> */}
                 {/* <LinkContainer to="/"> */}
                 
-                  <Navbar.Brand href="/">NO BS BC</Navbar.Brand>
+                  <Navbar.Brand href="/" className='py-3 p-5'>NO BS BC</Navbar.Brand>
                 {/* </LinkContainer> */}
                
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -72,8 +73,7 @@ function App() {
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="/write-review">Write Reviews</Nav.Link>
-            <Nav.Link href="/login">Login</Nav.Link>
-            <Nav.Link href="/signup">Signup</Nav.Link>
+           
           </Nav>
           <Form className="d-flex">
             <Form.Control
@@ -84,38 +84,15 @@ function App() {
             />
             {/* <Button variant="outline-success">Search</Button> */}
           </Form>
+          <Nav.Link href="/login">Login</Nav.Link>
+            <Nav.Link href="/signup">Signup</Nav.Link>
         </Navbar.Collapse>
-              </Container>
+              {/* </Container> */}
           </Navbar>
-          <Header>
-          <div className="container">
-            <Switch>
-              <Route 
-                path="/" 
-                element={<Home />}
-              />
-              <Route 
-                path="/login" 
-                element={<Login />}
-              />
-              {/* <Route 
-                path="/signup" 
-                element={<Signup />}
-              /> */}
-              <Route 
-                path="/me" 
-                element={<Profile />}
-              />
-              <Route 
-                path="/profiles/:profileId"
-                element={<Profile />}
-              />
-            </Switch>
-          </div>
-          {/* <Footer /> */}
-          </Header>
+          
         </div>
       </Router>
+      <LandingPage/>
       <Footer/>
     </ApolloProvider>
   );
