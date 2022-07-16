@@ -25,6 +25,7 @@ import Form from 'react-bootstrap/Form';
 import Footer from './components/Footer';
 import LandingPage from './components/LandingPage';
 // import PostCourseList from './components/CourseList';
+import Courses from './pages/Courses';
 import './App.css';
 
 
@@ -112,10 +113,15 @@ function App() {
             path="/users/:userId"
             element={<User />}
           />
+          <Route
+            path="/courses"
+            element={<Courses />}
+          />
            <Route
             path="/"
             element={<LandingPage />} />
             </Routes>
+            
          
         <Footer />
       </Router>

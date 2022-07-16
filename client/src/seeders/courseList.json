@@ -1,0 +1,30 @@
+[
+    {
+        "school": "Springboard",
+        "cost": "9900",
+        "length": 36,
+        "location": "Online",
+        "curriculum": ["React", "JavaScript", "jQuery"]
+    },
+    {
+        "school": "Ironhack",
+        "cost": "13000",
+        "length": 24,
+        "location": "Miami",
+        "curriculum": ["Angular", "MongoDB", "Express"]
+    },
+    {
+        "school": "MIT xPro Bootcamp",
+        "cost": "6950",
+        "length": 32,
+        "location": "Online",
+        "curriculum": ["MERN", "JavaScript"]
+    },
+    {
+        "school": "devCodeCamp",
+        "cost": "8900",
+        "length": 22,
+        "location": "Online",
+        "curriculum": ["Python", "Django", "SQL"]
+    }
+]
