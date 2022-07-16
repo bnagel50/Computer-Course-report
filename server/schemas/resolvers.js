@@ -19,9 +19,9 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
 
-    // courses: async() => {
-    //   return Course.find().sort();
-    // },
+    courses: async() => {
+      return Course.find().sort();
+    },
     // course: async(parent, { courseId }) => {
     //   return Course.findOne({ _id: courseId });
     // }
@@ -71,7 +71,7 @@ const resolvers = {
     //   }
     // },
 
-    
+
     // addReview: async (parent, args, context) => {
     //   console.log('Made it here')
     //   const review = await Review.create(reviewData);
