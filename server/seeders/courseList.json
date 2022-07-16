@@ -2,86 +2,29 @@
     {
         "school": "Springboard",
         "cost": "9900",
-        "length": "36",
-        "avgRating": "4",
+        "length": 36,
         "location": "Online",
-        "numOfReviews": "1",
-        "curriculum": ["React", "JavaScript", "jQuery"],
-        "reviews": [
-            {
-                "name": "Austin Jones",
-                "employment": "Yes",
-                "comments": "It was a challenging course, but I learned a lot and found a job in the field. The material goes above and beyond to prepare you for the real world of coding." 
-            }
-        ]
+        "curriculum": ["React", "JavaScript", "jQuery"]
     },
     {
         "school": "Ironhack",
         "cost": "13000",
-        "length": "24",
-        "avgRating": "5",
+        "length": 24,
         "location": "Miami",
-        "numOfReviews": "2",
-        "curriculum": ["Angular", "MongoDB", "Express"],
-        "reviews": [
-            {
-                "name": "Justin Ames",
-                "employment": "Yes",
-                "comments": "Fantastic bootcamp, I learned everything needed to find a job quickly. Starting from little coding knowledge, I was able to learn many great skills." 
-            },
-            {
-                "name": "Charles Adams",
-                "employment": "Yes",
-                "comments": "I had a great instructor and gained invaluable experience and tools for the industry. Career services helped in many ways during the course and afterwards."
-            }
-        ]
+        "curriculum": ["Angular", "MongoDB", "Express"]
     },
     {
         "school": "MIT xPro Bootcamp",
         "cost": "6950",
-        "length": "32",
-        "avgRating": "1",
+        "length": 32,
         "location": "Online",
-        "numOfReviews": "2",
-        "curriculum": ["MERN", "JavaScript"],
-        "reviews": [
-            {
-                "name": "Amanda Brown",
-                "employment": "No",
-                "comments": "Taught outdated concepts and did not help at all with my job search. Impossible to learn using their videos." 
-            },
-            {
-                "name": "Paul Williams",
-                "employment": "No",
-                "comments": "Terribly disorganized, I would not recommend this bootcamp to anyone. Level of experience needed to understand was far more than advertised."
-            }
-        ]
+        "curriculum": ["MERN", "JavaScript"]
     },
     {
         "school": "devCodeCamp",
         "cost": "8900",
-        "length": "22",
-        "avgRating": "4",
+        "length": 22,
         "location": "Online",
-        "numOfReviews": "3",
-        "curriculum": ["Python", "Django", "SQL"],
-        "reviews": [
-            {
-                "name": "Haley James",
-                "employment": "Yes",
-                "comments": "Can't say enough good things about this program, the instructors were always willing to help in any way possible." 
-            },
-            {
-                "name": "Louis Pond",
-                "employment": "No",
-                "comments": "This course had great content, but moved through topics too fast for me to fully understand them all."
-            },
-            {
-                "name": "Hank Johnson",
-                "employment": "Yes",
-                "comments": "It was difficult at the beginning, but sticking through it led to me getting a great job. Career services helped me throughout my job search."
-            }
-        ]
+        "curriculum": ["Python", "Django", "SQL"]
     }
-
 ]
