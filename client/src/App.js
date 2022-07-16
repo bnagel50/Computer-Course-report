@@ -25,6 +25,7 @@ import Form from 'react-bootstrap/Form';
 import Footer from './components/Footer';
 import LandingPage from './components/LandingPage';
 // import PostCourseList from './components/CourseList';
+import './App.css';
 
 
 
@@ -92,7 +93,7 @@ function App() {
           </Navbar>
         </div>
 
-        <LandingPage />
+        
         <Routes>
           <Route
             path="/login"
@@ -110,7 +111,12 @@ function App() {
           <Route
             path="/users/:userId"
             element={<User />}
-          /></Routes>
+          />
+           <Route
+            path="/"
+            element={<LandingPage />} />
+            </Routes>
+         
         <Footer />
       </Router>
     </ApolloProvider>

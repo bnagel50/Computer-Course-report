@@ -29,7 +29,42 @@ const courseSchema = new Schema({
             required: true
         },
     ],
-    reviews: [reviewSchema],
+    reviews: [
+        {            
+            name: {
+                type: Schema.Types.String,
+                ref: "User",
+                required: true,
+            }, 
+            comments: { 
+                type: String, 
+                required: true, 
+            },            
+            name:{            
+                    type: String,            
+                    required: true,            
+                
+            },            
+            curriculum: {            
+                    type: Number,            
+                required: true,
+            },
+            instructors: {
+                type: Number,
+                required: true
+            },
+            overallExperience: {
+                type: Number,
+                required: true,
+            },
+            jobAssistance: {
+                type: Number,
+                required: true,
+            },
+            employment: { type: String, required: true, }, time: { type: Date, default: Date.now() },
+        },
+
+    ],
 
 },
 {

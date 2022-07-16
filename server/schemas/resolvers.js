@@ -34,7 +34,7 @@ const resolvers = {
       console.log(user);
       const token = signToken(user);
       console.log(token);
-
+      console.log('hellooooooo')
       return { token, user };
     },
     login: async (parent, { email, password }) => {
