@@ -60,9 +60,10 @@ const typeDefs = gql`
     addUser(name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     removeUser: User
-    addCourse(courseData: CourseInput): Course
-    # addReview(reviewData: ReviewInput): Reviews
-    # remove
+    # addCourse(courseData: CourseInput): Course
+    # addReview(reviewData: ReviewInput): Review
+    # # remove
+    # removeReview: Review
   }
 `;
 
