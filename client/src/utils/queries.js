@@ -30,4 +30,17 @@ export const QUERY_ME = gql`
   }
 `;
 
+export const QUERY_COURSES = gql`
+query allCourses {
+  courses{
+    _id
+    school
+    cost
+    length
+    location
+    curriculum
+  }
+}
+`;
+
 
