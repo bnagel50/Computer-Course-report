@@ -16,17 +16,35 @@ const typeDefs = gql`
   type Course {
     school: String!
     cost: String!
-    length: Number!
+    length: Int!
     location: String!
-    curriculum: String!
+    curriculum: [String!]
   }
 
   input CourseInput {
     school: String!
     cost: String!
-    length: Number!
+    length: Int!
     location: String!
-    curriculum: String!
+    curriculum: [String!]
+  }
+
+  type Review {
+    experience: Int!
+    instructors: Int!
+    curriculum: Int!
+    jobAssistance: Int!
+    employment: String!
+    commentBody: String
+  }
+
+  type ReviewInput {
+    experience: Int!
+    instructors: Int!
+    curriculum: Int!
+    jobAssistance: Int!
+    employment: String!
+    commentBody: String
   }
 
   type Query {
@@ -34,7 +52,8 @@ const typeDefs = gql`
     user(userId: ID!): User
     me: User
     courses: [Course]!
-    course: (courseId: ID!): Course
+    
+    # course: (courseId: ID!): Course
   }
 
   type Mutation {
@@ -42,6 +61,8 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     removeUser: User
     addCourse(courseData: CourseInput): Course
+    # addReview(reviewData: ReviewInput): Reviews
+    # remove
   }
 `;
 

@@ -26,7 +26,7 @@ const reviewSchema = new Schema({
         required: true,
     },
     commentBody: {
-        type: Text,
+        type: String,
         required: true,
     },
 
