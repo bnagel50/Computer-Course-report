@@ -7,21 +7,29 @@ import { useQuery } from '@apollo/client';
 // import  from '../components/ProfileList';
 
 import { QUERY_COURSES } from '../utils/queries';
+import './courses.css'
 
 const Courses = () => {
   const { loading, data } = useQuery(QUERY_COURSES);
-  const profiles = data?.profiles || [];
+
+  console.log({ loading, data })
 
   return (
     <main>
       <div className="flex-row justify-center">
         <div className="col-12 col-md-10 my-3">
-          {/* {loading ? (
+          {loading ? (
             <div>Loading...</div>
           ) : (
-            (<div >{JSON.stringify(courses)}</div>
-        )
-          )} */}
+            <div className="">
+              {data.courses.map(course => (<div className="course-item card">
+                <p>Course {course.school}</p>
+                <p>Location: {course.location}</p>
+                <p>curriculum: {course.curriculum.join(', ')}</p>
+              </div>))}
+            </div>
+
+          )}
         </div>
       </div>
     </main>

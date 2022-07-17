@@ -19,14 +19,20 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
 
-    courses: async() => {
-      return Course.find().sort();
+    courses: async () => {
+      return Course.find();
     },
     // course: async(parent, { courseId }) => {
     //   return Course.findOne({ _id: courseId });
     // }
     reviews: async () => {
       return Review.find();
+    },
+  },
+
+  Course: {
+    reviews: async (parent) => {
+      return Review.find({ courseId: parent._id })
     }
   },
 
@@ -75,11 +81,11 @@ const resolvers = {
     // },
 
 
-    addReview: async (parent, { experience, instructors, curriculum, jobAssistance, employment, commentBody }) => {
-      console.log('Made it here')
-      const review = await Review.create({ experience, instructors, curriculum, jobAssistance, employment, commentBody });
+    addReview: async (parent, { reviewInput }) => {
+      console.log('Made it here', reviewInput)
+      const review = await Review.create(reviewInput);
       console.log(review)
-      return { review };
+      return review;
     },
     removeReview: async (parent, args, context) => {
       if (context.review) {

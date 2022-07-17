@@ -1,4 +1,5 @@
-const { Schema, model} = require ('mongoose');
+const { Schema, model, Types} = require ('mongoose');
+const { ObjectId } = Types
 
 const reviewSchema = new Schema({
     experience: {
@@ -25,7 +26,14 @@ const reviewSchema = new Schema({
         type: String,
         required: true,
     },
-
+    userId: {
+        type: ObjectId,
+        ref: 'User'
+    },
+    courseId: {
+        type: ObjectId,
+        ref: 'Course'
+    }
 });
 
 const Review = model('Review', reviewSchema);
