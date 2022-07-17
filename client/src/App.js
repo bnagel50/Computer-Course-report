@@ -13,12 +13,10 @@ import User from './pages/Profile';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 // import Header from './components/Header';
-import Navbar from 'react-bootstrap/Navbar';
+
 // import Container from 'react-bootstrap/Container';
 // import { LinkContainer }from "react-router-bootstrap";
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Nav from 'react-bootstrap/Nav';
-import Form from 'react-bootstrap/Form';
+
 // import Button from 'react-bootstrap/Button';
 // import { Link } from 'react-router-dom';
 // import Footer from './components/Footer';
@@ -27,8 +25,10 @@ import LandingPage from './components/LandingPage';
 // import PostCourseList from './components/CourseList';
 import Courses from './pages/Courses';
 import './App.css';
-import { QUERY_COURSES } from './utils/queries';
-import './courses.css'
+// import { QUERY_COURSES } from './utils/queries';
+// import './courses.css'
+import './components/NavBar/index'
+import NavigationBar from './components/NavBar'
 
 
 
@@ -57,44 +57,8 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
-          <Navbar fixed='top' bg="dark" variant="dark">
-            {/* <Container fixed="top"> */}
-            {/* <LinkContainer to="/"> */}
-
-            <Navbar.Brand href="/" className='py-3 p-5'>NO BS BC</Navbar.Brand>
-            {/* </LinkContainer> */}
-
-            <Navbar.Toggle aria-controls="navbarScroll" />
-            <Navbar.Collapse id="navbarScroll">
-              <Nav
-                className="me-auto my-2 my-lg-0 text-white "
-                style={{ maxHeight: '100px' }}
-                navbarScroll
-              >
-              </Nav>
-              <NavDropdown title="Browse Courses" id="navbarScrollingDropdown" className='text-white'>
-                <NavDropdown.Item href="/" >Full stack</NavDropdown.Item>
-                <NavDropdown.Item href="/">
-                  UX/UI
-                </NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link href="/write-review" className='text-white'>Write Reviews</Nav.Link>
-              <Form className="d-flex">
-                <Form.Control
-                  type="search"
-                  placeholder="Search"
-                  className="me-2"
-                  aria-label="Search"
-                />
-                {/* <Button variant="outline-success">Search</Button> */}
-              </Form>
-              <Nav.Link href="/login" className='text-white'>Login</Nav.Link>
-              <Nav.Link href="/signup" className='text-white'>Signup</Nav.Link>
-            </Navbar.Collapse>
-            {/* </Container> */}
-          </Navbar>
-        </div>
+      <NavigationBar />
+        
 
         
         <Routes>

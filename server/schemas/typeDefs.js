@@ -23,13 +23,13 @@ const typeDefs = gql`
     reviews: [Review]
   }
 
-  input CourseInput {
-    school: String!
-    cost: String!
-    length: Int!
-    location: String!
-    curriculum: [String!]
-  }
+  # input CourseInput {
+  #   school: String!
+  #   cost: String!
+  #   length: Int!
+  #   location: String!
+  #   curriculum: [String!]
+  # }
 
   type Review {
     _id: ID!
