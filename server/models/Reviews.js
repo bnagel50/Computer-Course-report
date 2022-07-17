@@ -1,10 +1,6 @@
 const { Schema, model} = require ('mongoose');
 
 const reviewSchema = new Schema({
-    id: {
-        type: String,
-        required: true,
-    },
     experience: {
         type: Number,
         required: true,
