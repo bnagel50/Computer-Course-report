@@ -18,16 +18,16 @@ const Courses = () => {
     <main className='main-courses'>
       <div className="flex-row justify-center">
         <div className="col-12 col-md-10 my-3">
-        <div>
-              <h1>hello</h1>
-        </div>
+          <div>
+            <h1>hello</h1>
+          </div>
           {loading ? (
             <div>Loading...</div>
           ) : (
             
             <div className="main-stuff">
               {data.courses.map(course => (<div className="course-item card">
-                <p className='course-name'>Course: {course.school}</p>
+                <p href="/courseInfo" className='course-name' >Course: {course.school}</p>
                 <p className='course-curriculum'>curriculum: {course.curriculum.join(', ')}</p>
                 <p className='course-cost'>cost: ${course.cost}</p>
                 <p className='course-length'>length: {course.length}-weeks</p>

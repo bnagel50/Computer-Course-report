@@ -34,12 +34,17 @@
 P tag courses
 
 */
+.course-name:hover{
+    color: white;
+    font-weight: bolder;
+}
+
 .course-name{
    font-weight: bold;
    padding: 15px;
    margin: 15px;
    text-shadow: 0px 1px 2px #000000;
-   
+   cursor: pointer;
 }
 
 .course-location{
@@ -51,8 +56,8 @@ P tag courses
 }
 
 .course-cost{
-    display: flex;
-    justify-content: flex-end;
+    /* display: flex;
+    justify-content: flex-end; */
 }
 
 .course-length{

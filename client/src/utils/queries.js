@@ -32,7 +32,20 @@ export const QUERY_ME = gql`
 
 export const QUERY_COURSES = gql`
 query allCourses {
-  courses{
+  courses {
+    _id
+    school
+    cost
+    length
+    location
+    curriculum
+  }
+}
+`;
+
+export const QUERY_COURSE = gql`
+query singleCourse($courseId: ID!) {
+  courses(courseId: $courseId) {
     _id
     school
     cost
