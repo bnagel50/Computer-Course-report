@@ -21,10 +21,52 @@
         "curriculum": ["MERN", "JavaScript"]
     },
     {
-        "school": "devCodeCamp",
-        "cost": "8900",
-        "length": 22,
+        "school": "The Ohio State University Boot Camps",
+        "cost": "12245",
+        "length": 12,
         "location": "Online",
-        "curriculum": ["Python", "Django", "SQL"]
+        "curriculum": ["Express", "MongoDB", "MySQL", "React"]
+    },
+    {
+        "school": "Georgia Tech Boot Camps",
+        "cost": "10000",
+        "length": 12,
+        "location": "Online",
+        "curriculum": ["HTML", "CSS", "jQuery"]
+    },
+    {
+        "school": "Michigan State University Boot Camps",
+        "cost": "11745",
+        "length": 24,
+        "location": "Online",
+        "curriculum": ["Git", "Bootstrap", "MySQL", "Node"]
+    },
+    {
+        "school": "App Academy",
+        "cost": "20000",
+        "length": 24,
+        "location": "Online",
+        "curriculum": ["Ruby on Rails", "React", "SQL"]
+    },
+    {
+        "school": "General Assembly",
+        "cost": "3950",
+        "length": 10,
+        "location": "Online",
+        "curriculum": ["JavaScript", "React"]
+    },
+    {
+        "school": "Codesmith",
+        "cost": "19950",
+        "length": 12,
+        "location": "Los Angeles",
+        "curriculum": ["Python", "Angular", "SQL", "React"]
+    },
+    {
+        "school": "Actualize",
+        "cost": "14900",
+        "length": 16,
+        "location": "Online",
+        "curriculum": ["Angular", "Ruby", "SQL"]
     }
 ]
