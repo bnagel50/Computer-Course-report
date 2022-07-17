@@ -1,35 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-import Navbar, { Brand } from 'react-bootstrap/Navbar';
+import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Form from 'react-bootstrap/Form';
-import { useQuery } from '@apollo/client';
-import { QUERY_COURSES } from '../../utils/queries';
-import TextField from '@mui/material/TextField';
-import Autocomplete from '@mui/material/Autocomplete';
+import AutoComplete from './AutoComplete';
 
 const NavigationBar = () => {
-//     const { loading, data} = useQuery(QUERY_COURSES);
-//     const { schoolOptions, setSchoolOptions} = useState([]);
-
-//     const filterSchools = (data) => {
-//         return data.map((d, idx) => {
-//             return {
-//                 id: idx,
-//                 label: d.school
-//             };
-//         })
-//     };
-
-//     useEffect(() => {
-//         const schools = filterSchools(data);
-//         setSchoolOptions(schools);
-//         debugger
-//     }, [data]);
-
     return (
-
         <div className="flex-column justify-flex-start min-100-vh">
             <Navbar fixed='top' bg="dark" variant="dark">
                 {/* <Container fixed="top"> */}
@@ -53,30 +30,19 @@ const NavigationBar = () => {
                         </NavDropdown.Item>
                     </NavDropdown>
                     <Nav.Link href="/write-review" className='text-white'>Write Reviews</Nav.Link>
-                    {/* <Form className="d-flex">
-                        <Form.Control
-                            type="search"
-                            placeholder="Search"
-                            className="me-2"
-                            aria-label="Search"
-                        />
-                        <Button variant="outline-success">Search</Button>
-                    </Form> */}
-                    {/* <Autocomplete
-                        disablePortal
-                        id="combo-box-demo"
-                        options={schoolOptions}
-                        sx={{ width: 300 }}
-                        renderInput={(params) => <TextField {...params} label="Movie" />}
-                    /> */}
+                    <AutoComplete />
 
-                    <Nav.Link href="/login" className='text-white'>Login</Nav.Link>
-                    <Nav.Link href="/signup" className='text-white'>Signup</Nav.Link>
-                </Navbar.Collapse>
-                {/* </Container> */}
-            </Navbar>
-        </div>
-    )
-                }
+          <Nav.Link href="/login" className="text-white">
+            Login
+          </Nav.Link>
+          <Nav.Link href="/signup" className="text-white">
+            Signup
+          </Nav.Link>
+        </Navbar.Collapse>
+        {/* </Container> */}
+      </Navbar>
+    </div>
+  );
+};
 
 export default NavigationBar;
