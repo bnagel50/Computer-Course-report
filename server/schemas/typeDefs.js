@@ -52,6 +52,7 @@ const typeDefs = gql`
     user(userId: ID!): User
     me: User
     courses: [Course]!
+    reviews: [Review]!
     
     # course: (courseId: ID!): Course
   }
@@ -61,9 +62,9 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     removeUser: User
     # addCourse(courseData: CourseInput): Course
-    # addReview(reviewData: ReviewInput): Review
+    addReview(experience: Int!, instructors: Int!, curriculum: Int!, jobAssistance: Int!, employment: String!, commentBody: String!): Review
     # # remove
-    # removeReview: Review
+    removeReview: Review
   }
 `;
 

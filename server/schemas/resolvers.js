@@ -25,6 +25,9 @@ const resolvers = {
     // course: async(parent, { courseId }) => {
     //   return Course.findOne({ _id: courseId });
     // }
+    reviews: async () => {
+      return Review.find();
+    }
   },
 
   Mutation: {
@@ -72,17 +75,18 @@ const resolvers = {
     // },
 
 
-    // addReview: async (parent, args, context) => {
-    //   console.log('Made it here')
-    //   const review = await Review.create(reviewData);
-    //   return { review };
-    // },
-    // removeReview: async (parent, args, context) => {
-    //   if (context.review) {
-    //     return Review.findOneAndDelete({ _id: context.user._id });
-    //   }
-    //   throw new AuthenticationError('You need to be logged in!');
-    // },
+    addReview: async (parent, { experience, instructors, curriculum, jobAssistance, employment, commentBody }) => {
+      console.log('Made it here')
+      const review = await Review.create({ experience, instructors, curriculum, jobAssistance, employment, commentBody });
+      console.log(review)
+      return { review };
+    },
+    removeReview: async (parent, args, context) => {
+      if (context.review) {
+        return Review.findOneAndDelete({ _id: context.review._id });
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
   },
 };
 
