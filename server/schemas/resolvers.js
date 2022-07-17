@@ -19,13 +19,23 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
 
-    courses: async() => {
-      return Course.find().sort();
+    courses: async () => {
+      console.log('here')
+      return Course.find();
     },
     // course: async(parent, { courseId }) => {
     //   return Course.findOne({ _id: courseId });
     // }
-    
+    reviews: async () => {
+      return Review.find();
+    },
+  },
+
+  Course: {
+    reviews: async (parent) => {
+      console.log('reviews for:', parent._id)
+      return Review.find({ courseId: parent._id })
+    }
   },
 
   Mutation: {
@@ -73,14 +83,15 @@ const resolvers = {
     // },
 
 
-    addReview: async (parent, args, context) => {
-      console.log('Made it here')
-      const review = await Review.create(reviewData);
-      return { review };
+    addReview: async (parent, { reviewInput }) => {
+      console.log('Made it here', reviewInput)
+      const review = await Review.create(reviewInput);
+      console.log(review)
+      return review;
     },
     removeReview: async (parent, args, context) => {
       if (context.review) {
-        return Review.findOneAndDelete({ _id: context.user._id });
+        return Review.findOneAndDelete({ _id: context.review._id });
       }
       throw new AuthenticationError('You need to be logged in!');
     },

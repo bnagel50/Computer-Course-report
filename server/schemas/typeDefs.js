@@ -14,11 +14,13 @@ const typeDefs = gql`
   }
 
   type Course {
+    _id: ID!
     school: String!
     cost: String!
     length: Int!
     location: String!
     curriculum: [String!]
+    reviews: [Review]
   }
 
   input CourseInput {
@@ -30,21 +32,27 @@ const typeDefs = gql`
   }
 
   type Review {
+    _id: ID!
     experience: Int!
     instructors: Int!
     curriculum: Int!
     jobAssistance: Int!
     employment: String!
     commentBody: String
+    course: Course!
+    user: User!
   }
 
-  type ReviewInput {
+  input ReviewInput {
+    courseId: ID!
+    userId: ID!
     experience: Int!
     instructors: Int!
     curriculum: Int!
     jobAssistance: Int!
     employment: String!
     commentBody: String
+
   }
 
   type Query {
@@ -52,6 +60,7 @@ const typeDefs = gql`
     user(userId: ID!): User
     me: User
     courses: [Course]!
+    reviews: [Review]!
     
     # course: (courseId: ID!): Course
   }
@@ -61,8 +70,9 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     removeUser: User
     # addCourse(courseData: CourseInput): Course
-    addReview(experience: Int!, instructors: Int!, curriculum: Int!, jobAssistance: Int!, employment: String!, commentBody: String!): Review
-    # remove
+    
+    addReview(reviewInput: ReviewInput): Review
+    # # remove
     removeReview: Review
   }
 `;
