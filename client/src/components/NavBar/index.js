@@ -6,11 +6,25 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import { useQuery } from '@apollo/client';
 import { QUERY_COURSES } from '../../utils/queries';
+import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
 
 const NavigationBar = () => {
     const { loading, data} = useQuery(QUERY_COURSES);
+    const { schoolOptions, setSchoolOptions} = useState([]);
+
+    const filterSchools = (data) => {
+        return data.map((d, idx) => {
+            return {
+                id: idx,
+                label: d.school
+            };
+        })
+    };
+
     useEffect(() => {
-        const test = data
+        const schools = filterSchools(data);
+        setSchoolOptions(schools);
         debugger
     }, [data]);
 
@@ -39,15 +53,23 @@ const NavigationBar = () => {
                         </NavDropdown.Item>
                     </NavDropdown>
                     <Nav.Link href="/write-review" className='text-white'>Write Reviews</Nav.Link>
-                    <Form className="d-flex">
+                    {/* <Form className="d-flex">
                         <Form.Control
                             type="search"
                             placeholder="Search"
                             className="me-2"
                             aria-label="Search"
                         />
-                        {/* <Button variant="outline-success">Search</Button> */}
-                    </Form>
+                        <Button variant="outline-success">Search</Button>
+                    </Form> */}
+                    <Autocomplete
+                        disablePortal
+                        id="combo-box-demo"
+                        options={schoolOptions}
+                        sx={{ width: 300 }}
+                        renderInput={(params) => <TextField {...params} label="Movie" />}
+                    />
+
                     <Nav.Link href="/login" className='text-white'>Login</Nav.Link>
                     <Nav.Link href="/signup" className='text-white'>Signup</Nav.Link>
                 </Navbar.Collapse>
