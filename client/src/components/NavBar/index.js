@@ -1,12 +1,18 @@
-import React from 'react'
-
+import React, { useState, useEffect } from 'react';
 
 import Navbar, { Brand } from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
+import { useQuery } from '@apollo/client';
+import { QUERY_COURSES } from '../../utils/queries';
 
 const NavigationBar = () => {
+    const { loading, data} = useQuery(QUERY_COURSES);
+    useEffect(() => {
+        const test = data
+        debugger
+    }, [data]);
 
     return (
 
