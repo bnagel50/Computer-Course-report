@@ -22,12 +22,18 @@ const resolvers = {
     courses: async () => {
       return Course.find();
     },
-    // course: async(parent, { courseId }) => {
-    //   return Course.findOne({ _id: courseId });
-    // }
+
+    course: async(parent, { courseId }) => {
+      return Course.findOne({ _id: courseId });
+    },
+
     reviews: async () => {
       return Review.find();
     },
+
+    review: async(parent, { reviewId }) => {
+      return Review.findOne({ _id: reviewId })
+    }
   },
 
   Course: {

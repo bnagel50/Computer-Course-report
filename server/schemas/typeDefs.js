@@ -52,7 +52,6 @@ const typeDefs = gql`
     jobAssistance: Int!
     employment: String!
     commentBody: String
-
   }
 
   type Query {
@@ -61,8 +60,8 @@ const typeDefs = gql`
     me: User
     courses: [Course]!
     reviews: [Review]!
-    
-    # course: (courseId: ID!): Course
+    review(reviewId: ID!): Review
+    course(courseId: ID!): Course
   }
 
   type Mutation {
@@ -73,7 +72,7 @@ const typeDefs = gql`
     
     addReview(reviewInput: ReviewInput): Review
     # # remove
-    removeReview: Review
+    removeReview(reviewId: ID!): Course
   }
 `;
 

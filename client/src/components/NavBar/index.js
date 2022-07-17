@@ -10,23 +10,23 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 
 const NavigationBar = () => {
-    const { loading, data} = useQuery(QUERY_COURSES);
-    const { schoolOptions, setSchoolOptions} = useState([]);
+//     const { loading, data} = useQuery(QUERY_COURSES);
+//     const { schoolOptions, setSchoolOptions} = useState([]);
 
-    const filterSchools = (data) => {
-        return data.map((d, idx) => {
-            return {
-                id: idx,
-                label: d.school
-            };
-        })
-    };
+//     const filterSchools = (data) => {
+//         return data.map((d, idx) => {
+//             return {
+//                 id: idx,
+//                 label: d.school
+//             };
+//         })
+//     };
 
-    useEffect(() => {
-        const schools = filterSchools(data);
-        setSchoolOptions(schools);
-        debugger
-    }, [data]);
+//     useEffect(() => {
+//         const schools = filterSchools(data);
+//         setSchoolOptions(schools);
+//         debugger
+//     }, [data]);
 
     return (
 
@@ -62,13 +62,13 @@ const NavigationBar = () => {
                         />
                         <Button variant="outline-success">Search</Button>
                     </Form> */}
-                    <Autocomplete
+                    {/* <Autocomplete
                         disablePortal
                         id="combo-box-demo"
                         options={schoolOptions}
                         sx={{ width: 300 }}
                         renderInput={(params) => <TextField {...params} label="Movie" />}
-                    />
+                    /> */}
 
                     <Nav.Link href="/login" className='text-white'>Login</Nav.Link>
                     <Nav.Link href="/signup" className='text-white'>Signup</Nav.Link>
@@ -77,6 +77,6 @@ const NavigationBar = () => {
             </Navbar>
         </div>
     )
-}
+                }
 
 export default NavigationBar;
