@@ -7,7 +7,7 @@ import { useQuery } from '@apollo/client';
 // import  from '../components/ProfileList';
 
 import { QUERY_COURSES } from '../utils/queries';
-import './courses.css'
+import '../pages/courses.css'
 
 const Courses = () => {
   const { loading, data } = useQuery(QUERY_COURSES);
@@ -15,7 +15,7 @@ const Courses = () => {
   console.log({ loading, data })
 
   return (
-    <main>
+    <main className='main-courses'>
       <div className="flex-row justify-center">
         <div className="col-12 col-md-10 my-3">
           <div>
@@ -24,14 +24,16 @@ const Courses = () => {
           {loading ? (
             <div>Loading...</div>
           ) : (
-
-            <div className="">
+            
+            <div className="main-stuff">
               {data.courses.map(course => (<div className="course-item card">
-                <p>Course {course.school}</p>
-                <p>Location: {course.location}</p>
-                <p>Curriculum: {course.curriculum.join(', ')}</p>
-                <p>Cost: ${course.cost}</p>
-                <p>Length: {course.length}-weeks</p>
+                <p href="/courseInfo" className='course-name' >Course: {course.school}</p>
+                <p className='course-curriculum'>curriculum: {course.curriculum.join(', ')}</p>
+                <p className='course-cost'>cost: ${course.cost}</p>
+                <p className='course-length'>length: {course.length}-weeks</p>
+                <p className='course-location'>Location: {course.location}</p>
+                
+                <p className='course-rating'>Rating: {course.rating}</p>
               </div>))}
             </div>
           )}

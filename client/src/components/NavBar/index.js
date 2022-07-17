@@ -2,7 +2,7 @@ import React from 'react';
 
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+// import NavDropdown from 'react-bootstrap/NavDropdown';
 import AutoComplete from './AutoComplete';
 
 const NavigationBar = () => {
@@ -23,12 +23,13 @@ const NavigationBar = () => {
                         navbarScroll
                     >
                     </Nav>
-                    <NavDropdown title="Browse Courses" id="navbarScrollingDropdown" className='text-white'>
+                    {/* <NavDropdown title="Browse Courses" id="navbarScrollingDropdown" className='text-white'>
                         <NavDropdown.Item href="/" >Full stack</NavDropdown.Item>
                         <NavDropdown.Item href="/">
                             UX/UI
                         </NavDropdown.Item>
-                    </NavDropdown>
+                    </NavDropdown> */}
+                    <Nav.Link href="/courses" className='text-white'>Browse Courses</Nav.Link>
                     <Nav.Link href="/write-review" className='text-white'>Write Reviews</Nav.Link>
                     <AutoComplete />
 

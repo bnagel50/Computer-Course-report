@@ -89,10 +89,6 @@ function App() {
             element={<Courses />}
           />
            <Route
-            path="/courseINFO"
-            element={<Courses />}
-          />
-           <Route
             path="/"
             element={<LandingPage />} />
             </Routes>
