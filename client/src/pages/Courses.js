@@ -29,9 +29,9 @@ const Courses = () => {
               {data.courses.map(course => (<div className="course-item card">
                 <p>Course {course.school}</p>
                 <p>Location: {course.location}</p>
-                <p>curriculum: {course.curriculum.join(', ')}</p>
-                <p>cost: ${course.cost}</p>
-                <p>length: {course.length}-weeks</p>
+                <p>Curriculum: {course.curriculum.join(', ')}</p>
+                <p>Cost: ${course.cost}</p>
+                <p>Length: {course.length}-weeks</p>
               </div>))}
             </div>
           )}

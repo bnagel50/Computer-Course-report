@@ -29,6 +29,7 @@ import './App.css';
 // import './courses.css'
 import './components/NavBar/index'
 import NavigationBar from './components/NavBar'
+import Course from './pages/Course';
 
 
 
@@ -78,6 +79,10 @@ function App() {
           <Route
             path="/users/:userId"
             element={<User />}
+          />
+          <Route
+            path="/courseInfo"
+            element={<Course />}
           />
           <Route
             path="/courses"
