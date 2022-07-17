@@ -20,7 +20,6 @@ const resolvers = {
     },
 
     courses: async () => {
-      console.log('here')
       return Course.find();
     },
     // course: async(parent, { courseId }) => {
@@ -33,7 +32,6 @@ const resolvers = {
 
   Course: {
     reviews: async (parent) => {
-      console.log('reviews for:', parent._id)
       return Review.find({ courseId: parent._id })
     }
   },
