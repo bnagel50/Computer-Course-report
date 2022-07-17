@@ -61,9 +61,9 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     removeUser: User
     # addCourse(courseData: CourseInput): Course
-    # addReview(reviewData: ReviewInput): Review
-    # # remove
-    # removeReview: Review
+    addReview(experience: Int!, instructors: Int!, curriculum: Int!, jobAssistance: Int!, employment: String!, commentBody: String!): Review
+    # remove
+    removeReview: Review
   }
 `;
 
