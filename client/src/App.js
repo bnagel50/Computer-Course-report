@@ -27,6 +27,8 @@ import LandingPage from './components/LandingPage';
 // import PostCourseList from './components/CourseList';
 import Courses from './pages/Courses';
 import './App.css';
+import { QUERY_COURSES } from './utils/queries';
+import './courses.css'
 
 
 
