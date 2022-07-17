@@ -32,13 +32,17 @@ const NavigationBar = () => {
                     <Nav.Link href="/write-review" className='text-white'>Write Reviews</Nav.Link>
                     <AutoComplete />
 
-                    <Nav.Link href="/login" className='text-white'>Login</Nav.Link>
-                    <Nav.Link href="/signup" className='text-white'>Signup</Nav.Link>
-                </Navbar.Collapse>
-                {/* </Container> */}
-            </Navbar>
-        </div>
-    )
-}
+          <Nav.Link href="/login" className="text-white">
+            Login
+          </Nav.Link>
+          <Nav.Link href="/signup" className="text-white">
+            Signup
+          </Nav.Link>
+        </Navbar.Collapse>
+        {/* </Container> */}
+      </Navbar>
+    </div>
+  );
+};
 
 export default NavigationBar;
