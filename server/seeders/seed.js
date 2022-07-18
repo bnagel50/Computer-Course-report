@@ -9,14 +9,23 @@ db.once('open', async () => {
     await User.deleteMany({});
     await User.create(userSeeds);
 
-    const user = await User.findOne({})
+    const users = await User.find({});
+    const userIds = Array.from(users).map(u => u._id)
 
     await Course.deleteMany({});
     await Course.create(courseSeeds);
 
     const course = await Course.findOne({ school: 'Springboard'})
 
-    const reviews = reviewSeeds.map(r => ({...r, courseId: course._id, userId: user._id}))
+    const reviews = reviewSeeds.map(r => {
+      const userId = getRandomItem(userIds)
+
+      return {
+        ...r, 
+        courseId: course._id,
+        userId: userId
+      }
+    })
 
     await Review.deleteMany({});
     await Review.create(reviews)
@@ -27,3 +36,8 @@ db.once('open', async () => {
     throw err;
   }
 });
+
+const getRandomItem = (arr) => {
+  const index = Math.floor(Math.random() * arr.length)
+  return arr[index]
+}

@@ -44,7 +44,7 @@ const resolvers = {
 
   Review: {
     user: async (parent) => {
-      return User.findOne(parent.userId)
+      return User.findOne({ _id: parent.userId })
     }
   },
 

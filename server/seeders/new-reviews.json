@@ -1,64 +1,52 @@
 
 [
     {
-        "courseId": "62d4eb0a5cd154008db4f3ac",
-        "userId": "62d4eb0a5cd154008db4f3a0",
         "experience": 5,
         "instructors": 4,
         "curriculum": 5,
-        "jobAssistance": 5,
+        "jobAssistance": 5, 
         "employment": "Yes",
-        "commentBody": "It was a challenging course, but I learned a lot and found a job in the field. The material goes above and beyond to prepare you for the real world of coding." 
+        "commentBody": "It was a challenging course, but I learned a lot and found a job in the field. The material goes above and beyond to prepare you for the real world of coding."
     },
     {
-        "courseId": "62d4eb0a5cd154008db4f3ac",
-        "userId": "62d4eb0a5cd154008db4f3a0",
         "experience": 5,
         "instructors": 4,
         "curriculum": 5,
         "jobAssistance": 5,
         "employment": "Yes",
-        "commentBody": "It was a challenging course, but I learned a lot and found a job in the field. The material goes above and beyond to prepare you for the real world of coding." 
+        "commentBody": "222222222222222222222" 
     },
     {
-        "courseId": "62d4eb0a5cd154008db4f3ac",
-        "userId": "62d4eb0a5cd154008db4f3a0",
         "experience": 5,
         "instructors": 4,
         "curriculum": 5,
         "jobAssistance": 5,
         "employment": "Yes",
-        "commentBody": "It was a challenging course, but I learned a lot and found a job in the field. The material goes above and beyond to prepare you for the real world of coding." 
+        "commentBody": "33333333333333333333333." 
     },
     {
-        "courseId": "62d4eb0a5cd154008db4f3ac",
-        "userId": "62d4eb0a5cd154008db4f3a0",
         "experience": 5,
         "instructors": 4,
         "curriculum": 5,
         "jobAssistance": 5,
         "employment": "Yes",
-        "commentBody": "It was a challenging course, but I learned a lot and found a job in the field. The material goes above and beyond to prepare you for the real world of coding." 
+        "commentBody": "4444444444444444444444" 
     },
     {
-        "courseId": "62d4eb0a5cd154008db4f3ac",
-        "userId": "62d4eb0a5cd154008db4f3a0",
         "experience": 5,
         "instructors": 4,
         "curriculum": 5,
         "jobAssistance": 5,
         "employment": "Yes",
-        "commentBody": "It was a challenging course, but I learned a lot and found a job in the field. The material goes above and beyond to prepare you for the real world of coding." 
+        "commentBody": "5555555555555555555555555555" 
     },
     {
-        "courseId": "62d4eb0a5cd154008db4f3ac",
-        "userId": "62d4eb0a5cd154008db4f3a0",
         "experience": 5,
         "instructors": 4,
         "curriculum": 5,
         "jobAssistance": 5,
         "employment": "Yes",
-        "commentBody": "It was a challenging course, but I learned a lot and found a job in the field. The material goes above and beyond to prepare you for the real world of coding." 
+        "commentBody": "66666666666666666666666666666" 
     }
 ]
 
