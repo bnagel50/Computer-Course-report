@@ -23,3 +23,17 @@ export const LOGIN_USER = gql`
     }
   }
 `;
+
+export const ADD_REVIEW = gql`
+mutation addReview($reviewInput: ReviewInput) {
+  addReview(reviewInput: $reviewInput) {
+    _id
+    experience
+    instructors
+    curriculum
+    jobAssistance
+    employment
+    commentBody
+  }
+}
+`;
