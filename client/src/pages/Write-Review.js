@@ -1,38 +1,28 @@
 import React, { useState } from 'react';
-import { useMutation } from '@apollo/client';
+import { useMutation, useQuery } from '@apollo/client';
+import ReviewAutoComplete from './Write-Review-Search';
 import { Link } from 'react-router-dom';
+import { QUERY_COURSES } from '../utils/queries';
 import { ADD_REVIEW } from '../utils/mutations';
 import Auth from '../utils/auth';
-import CourseDropDown from '../components/WriteReview/CourseDropDown';
 import './Write-Review.css';
+import AutoComplete from '../components/NavBar/AutoComplete';
 
 const WriteReview = ({ userId }) => {
-    const { data: user } = Auth.getProfile()
-    const emptyReview = { courseId: '', experience: '', instructors: '', curriculum: '', jobAssistance: '', employment: '', commentBody: '', userId: user._id }
 
-    const [reviewInput, setReview] = useState(emptyReview);
-
-    console.log(reviewInput)
-
-    const onChange = ev => {
-      const { name, value, dataset: { number } } = ev.target
-      console.log({ name, value, number})
-      setReview({ ...reviewInput, [name]: number? parseInt(value, 10) : value })
-    }
+    const [reviewInput, setReview] = useState({ courseId: '', experience: '', instructors: '', curriculum: '', jobAssistance: '', employment: '', commentBody: '' });
     
     const [addReview, {error}] = useMutation(ADD_REVIEW)
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
 
-        console.log('submitting', reviewInput)
-
         try {
             const data = await addReview({
-                variables: { reviewInput },
+                variables: { ...reviewInput },
             });
 
-            setReview(emptyReview);
+            setReview('');
         } catch (err) {
             console.error(err);
         }
@@ -40,77 +30,73 @@ const WriteReview = ({ userId }) => {
 
     return (
         <div>
-          <h4 className="header">Write your review below!</h4>
+          <h4 class="header">Write your review below!</h4>
     
           {Auth.loggedIn() ? (
             <form
               className="flex-row justify-center justify-space-between-md align-center"
               onSubmit={handleFormSubmit}
             >
+                <ReviewAutoComplete />
               <div className="col-12 col-lg-9">
-                <CourseDropDown onChange={onChange} courseId={reviewInput.courseId} />
+                <input
+                  placeholder="Which course did you complete?"
+                  value={reviewInput.courseId}
+                  className="form-input w-100"
+                  onChange={(event) => setReview(event.target.value)}
+                />
               </div>
               <div className="col-12 col-lg-9">
                 <input
-                  name="experience"
                   placeholder="Experience 1-5"
-                  data-number="true"
                   value={reviewInput.experience}
                   className="form-input w-100"
-                  onChange={onChange}
+                  onChange={(event) => setReview(event.target.value)}
                 />
               </div>
 
               <div className="col-12 col-lg-9">
                 <input
-                  name="instructors"
                   placeholder="Instructors 1-5"
-                  data-number="true"
                   value={reviewInput.instructors}
                   className="form-input w-100"
-                  onChange={onChange}
+                  onChange={(event) => setReview(event.target.value)}
                 />
               </div>
 
               <div className="col-12 col-lg-9">
                 <input
-                  name="curriculum"
                   placeholder="Curriculum 1-5"
-                  data-number="true"
                   value={reviewInput.curriculum}
                   className="form-input w-100"
-                  onChange={onChange}
+                  onChange={(event) => setReview(event.target.value)}
                 />
               </div>
 
               <div className="col-12 col-lg-9">
                 <input
-                  name="jobAssistance"
                   placeholder="Job Assistance 1-5"
-                  data-number="true"
                   value={reviewInput.jobAssistance}
                   className="form-input w-100"
-                  onChange={onChange}
+                  onChange={(event) => setReview(event.target.value)}
                 />
               </div>
 
               <div className="col-12 col-lg-9">
                 <input
-                  name="employment"
                   placeholder="Did you find a job in the coding field?"
                   value={reviewInput.employment}
                   className="form-input w-100"
-                  onChange={onChange}
+                  onChange={(event) => setReview(event.target.value)}
                 />
               </div>
 
               <div className="col-12 col-lg-9">
                 <input
-                  name="commentBody"
                   placeholder="How was your experience?"
                   value={reviewInput.commentBody}
                   className="form-input w-100"
-                  onChange={onChange}
+                  onChange={(event) => setReview(event.target.value)}
                 />
               </div>
     

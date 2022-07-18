@@ -49,13 +49,13 @@ const resolvers = {
   },
 
   Mutation: {
-    addUser: async (parent, { name, email, password }) => {
-      console.log('Made it here')
-      const user = await User.create({ name, email, password });
-      console.log(user);
+    addUser: async (parent, args) => {
+      // console.log('Made it here')
+      const user = await User.create(args);
+      // console.log(user);
       const token = signToken(user);
-      console.log(token);
-      console.log('hellooooooo')
+      // console.log(token);
+      // console.log('hellooooooo')
       return { token, user };
     },
     login: async (parent, { email, password }) => {
