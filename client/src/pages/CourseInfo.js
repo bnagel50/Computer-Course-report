@@ -27,7 +27,7 @@ const Course = () => {
             <div className="main-stuff">
               <div className="course-item card">
               <p className='course-name'>Name: {course.school}</p>
-                <p className='course-curriculum'>Curriculum: {course.curriculum}</p>
+                <p className='course-curriculum'>Curriculum: {course.curriculum.join(', ')}</p>
                 <p className='course-cost'>Cost: ${course.cost}</p>
                 <p className='course-length'>Length: {course.length}-weeks</p>
                 <p className='course-location'>Location: {course.location}</p>
@@ -36,7 +36,15 @@ const Course = () => {
               </div>
               <div className="reviews">
                 {course.reviews.map(review => (
-                  <div key={review._id}>{review.user.name}: {review.commentBody}</div>
+                <div>
+                  <div>{review.user.name}</div>
+                  <div key={review._id}>Experience: {review.experience}</div>
+                  <div key={review._id}>Instructors: {review.instructors}</div>
+                  <div key={review._id}>Curriculum: {review.curriculum}</div>
+                  <div key={review._id}>Job Assistance: {review.jobAssistance}</div>
+                  <div key={review._id}>Employment: {review.employment}</div>
+                  <div key={review._id}>Review: {review.commentBody}</div>
+                </div>
                 ))}
               </div>
             </div>
