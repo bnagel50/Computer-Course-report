@@ -5,6 +5,7 @@ import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
+import "../pages/signup.css"
 
 const Signup = () => {
   const [formState, setFormState] = useState({
@@ -41,10 +42,12 @@ const Signup = () => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
+    <main className="flex-row justify-center mb-4 main-log">
+      <div className="col-12 col-lg-10 first-div">
+      <div className='text-stuff'>
+          <h1>Let’s start by creating your NO BS BC account</h1>
         <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
+          <h4 className="card-header text-dark p-2">Sign Up</h4>
           <div className="card-body">
             {data ? (
               <p>
@@ -78,7 +81,7 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block btn-info"
+                  className="btn btn-block btn-info btn-submit"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
@@ -93,6 +96,7 @@ const Signup = () => {
               </div>
             )}
           </div>
+        </div>
         </div>
       </div>
     </main>
