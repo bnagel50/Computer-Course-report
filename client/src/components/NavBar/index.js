@@ -8,7 +8,7 @@ import AutoComplete from './AutoComplete';
 const NavigationBar = () => {
     return (
         <div className="flex-column justify-flex-start min-100-vh">
-            <Navbar fixed='top' bg="dark" variant="dark">
+            <Navbar fixed='top' bg="dark" variant="dark navbar-div">
                 {/* <Container fixed="top"> */}
                 {/* <LinkContainer to="/"> */}
 
