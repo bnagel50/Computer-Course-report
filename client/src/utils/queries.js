@@ -45,7 +45,7 @@ query allCourses {
 
 export const QUERY_COURSE = gql`
 query singleCourse($courseId: ID!) {
-  courses(courseId: $courseId) {
+  course(courseId: $courseId) {
     _id
     school
     cost

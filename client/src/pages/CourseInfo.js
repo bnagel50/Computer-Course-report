@@ -1,17 +1,10 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
-import { Link } from 'react-router-dom';
-// var json = require('../../../server/seeders/courseList.json')
+import { QUERY_COURSE } from '../utils/queries';
+import '../pages/courses.css';
 
-// import courses from './../../seeders/courseList.json'
-
-// import  from '../components/ProfileList';
-
-import { QUERY_COURSES } from '../utils/queries';
-import '../pages/courses.css'
-
-const Courses = () => {
-  const { loading, data } = useQuery(QUERY_COURSES);
+const Course = () => {
+  const { loading, data } = useQuery(QUERY_COURSE);
 
   console.log({ loading, data })
 
@@ -28,7 +21,6 @@ const Courses = () => {
             
             <div className="main-stuff">
               {data.courses.map(course => (<div className="course-item card">
-                <Link to={course._id} className='course-name' >{course.school}</Link>
                 <p className='course-curriculum'>Curriculum: {course.curriculum.join(', ')}</p>
                 <p className='course-cost'>Cost: ${course.cost}</p>
                 <p className='course-length'>Length: {course.length}-weeks</p>
@@ -44,4 +36,4 @@ const Courses = () => {
   );
 };
 
-export default Courses;
+export default Course;
