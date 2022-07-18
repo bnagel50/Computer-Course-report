@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 // Using emailjs to send me an email when someone fills out the form on the site
 import emailjs from "emailjs-com";
+import Form from 'react-bootstrap/Form';
 
 export default function Contact() {
   const form = useRef();
@@ -27,24 +28,34 @@ export default function Contact() {
   };
 
   return (
-    <div>
-      <h1 className="section-header">Send Me a Message</h1>
-      <form ref={form} onSubmit={sendEmail} id="contact-form">
-        <label className="form-label">Name</label>
-        <input className="form-field" type="text" name="name" />
-        <label className="form-label">Email</label>
-        <input className="form-field" type="email" name="email" />
-        <label className="form-label">
-          Tell us what Courses you Want us to Add!
-        </label>
-        <textarea className="form-field" id="message-field" name="message" />
-        <input
-          className="form-field"
-          id="submit-btn"
-          type="submit"
-          value="Send"
-        />
-      </form>
+    <main className="flex-row justify-center mb-4 main-log">
+       <div className="col-12 col-lg-10 first-div">
+        <div className='text-stuff'>
+           <h1>GET IN TOUCH WITH US 👇</h1>
+           <Form ref={form} onSubmit={sendEmail} id="contact-form">
+      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+        <Form.Label>Name</Form.Label>
+        <Form.Control size="lg" type="name" placeholder="Name"/>
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control size="lg" type="email" placeholder="Email" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+        <Form.Label>Tell us what Courses you Want us to Add! <br></br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sapien ante, egestas bibendu</Form.Label>
+        <Form.Control as="textarea" rows={3} />
+      </Form.Group>
+      <button
+                  className="btn btn-block btn-info btn-submit"
+                  style={{ cursor: 'pointer' }}
+                  type="Let's Collaborate !"
+                >
+                  Let's Collaborate !
+                </button>
+    </Form>
+      </div>
     </div>
+    </main>
   );
 }
+

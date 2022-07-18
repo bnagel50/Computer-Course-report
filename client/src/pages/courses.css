@@ -1,9 +1,6 @@
 .course-item {
     margin-bottom: 10px;
-    background: #EEFBFF
-
-    ; /* fallback color if gradients are not supported*/ 
-    
+    background: #EEFBFF;
     padding: 15px;
     margin: 15px;
     font-weight: bold;
@@ -22,8 +19,7 @@
 }
 
 .main-courses{
-    background-color: #D3FBD8
-    ;
+    background-color: #D3FBD8;
     padding: 10px;
     margin: 10px;
 }
@@ -48,22 +44,21 @@ P tag courses
    text-align: center;
 }
 
-.course-location{
+/* .course-location{
     
-}
+} */
 
-.course-curriculum{
-    /* text-align: center; */
-}
+/* .course-curriculum{
+    
+} */
 
-.course-cost{
-    /* display: flex;
-    justify-content: flex-end; */
-}
+/* .course-cost{
 
-.course-length{
+} */
 
-}
+/* .course-length{
+
+} */
 
 /* ######################################################## */
 
