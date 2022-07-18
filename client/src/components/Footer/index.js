@@ -19,7 +19,8 @@ function Footer() {
             </div>
             {/* Column2 */}
             <div className="col">
-              <h4>Contact Us!</h4>
+              {/* <h4>Contact Us!</h4> */}
+              <Link to="/ContactUs" className='text-white'>Contact Us!</Link>
               <ul className="list-unstyled">
                 <li>Fake email</li>
                 <li>Fake Other Thing</li>
