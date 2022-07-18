@@ -1,12 +1,17 @@
 import React from 'react';
+import { useParams } from 'react-router'
 import { useQuery } from '@apollo/client';
 import { QUERY_COURSE } from '../utils/queries';
 import '../pages/courses.css';
 
 const Course = () => {
-  const { loading, data } = useQuery(QUERY_COURSE);
+  const { courseId } = useParams()
+  const variables = { courseId }
+  const { loading, data = {} } = useQuery(QUERY_COURSE, { variables });
 
-  console.log({ loading, data })
+  const { course } = data;
+
+
 
   return (
     <main className='main-courses'>
@@ -18,16 +23,15 @@ const Course = () => {
           {loading ? (
             <div>Loading...</div>
           ) : (
-            
             <div className="main-stuff">
-              {data.courses.map(course => (<div className="course-item card">
+              <div className="course-item card">
                 <p className='course-curriculum'>Curriculum: {course.curriculum.join(', ')}</p>
                 <p className='course-cost'>Cost: ${course.cost}</p>
                 <p className='course-length'>Length: {course.length}-weeks</p>
                 <p className='course-location'>Location: {course.location}</p>
                 
                 <p className='course-rating'>Rating: {course.rating}</p>
-              </div>))}
+              </div>
             </div>
           )}
         </div>
