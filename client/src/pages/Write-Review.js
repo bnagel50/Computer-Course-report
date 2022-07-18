@@ -1,7 +1,9 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
+import ReviewAutoComplete from './Write-Review-Search';
 import { QUERY_COURSES } from '../utils/queries';
-import './courses.css'
+import { ADD_REVIEW } from '../utils/mutations';
+import './Write-Review.css';
 
 const WriteReview = () => {
      const { loading, data } = useQuery(QUERY_COURSES);
@@ -17,7 +19,8 @@ const WriteReview = () => {
             <div className='review-card'>
                 <h5>Which Bootcamp Would you like to Review?</h5>
                 <div className="form-group"></div>
-                <input type="text" name="school" id="nav-search-input" value="" placeholder="Type a school name..." class="form-control" required="required" autocomplete="off" data-auto-focus="true" data-parsley-required-message="School is required." data-autocomplete="/search/autocomplete_school_name" data-id-element="#review_school_id" data-parsley-id="9031"></input>
+                {/* <input type="text" name="school" id="nav-search-input" value="" placeholder="Type a school name..." class="form-control" required="required" autocomplete="off" data-auto-focus="true" data-parsley-required-message="School is required." data-autocomplete="/search/autocomplete_school_name" data-id-element="#review_school_id" data-parsley-id="9031"></input> */}
+                <ReviewAutoComplete />
                 <h5>Title</h5>
                 <input class="form-control" required="required" data-parsley-required-message="Title is required." type="text" name="review[title]" id="review_title" data-parsley-id="7404"></input>
                 <div className="form-group"></div>
@@ -32,4 +35,4 @@ const WriteReview = () => {
      )}
 
 
-export default WriteReview
+export default WriteReview;
