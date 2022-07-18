@@ -52,6 +52,19 @@ query singleCourse($courseId: ID!) {
     length
     location
     curriculum
+    reviews {
+      _id
+      experience
+      instructors
+      curriculum
+      commentBody
+      jobAssistance
+      employment
+      user {
+        _id
+        name
+      }
+    }
   }
 }
 `;

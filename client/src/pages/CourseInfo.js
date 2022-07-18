@@ -9,8 +9,9 @@ const Course = () => {
   const variables = { courseId }
   const { loading, data = {} } = useQuery(QUERY_COURSE, { variables });
 
-  const { course } = data;
+  const { course = {} } = data;
 
+  console.log({ course })
 
 
   return (
@@ -25,12 +26,18 @@ const Course = () => {
           ) : (
             <div className="main-stuff">
               <div className="course-item card">
-                <p className='course-curriculum'>Curriculum: {course.curriculum.join(', ')}</p>
+              <p className='course-name'>Name: {course.school}</p>
+                <p className='course-curriculum'>Curriculum: {course.curriculum}</p>
                 <p className='course-cost'>Cost: ${course.cost}</p>
                 <p className='course-length'>Length: {course.length}-weeks</p>
                 <p className='course-location'>Location: {course.location}</p>
                 
                 <p className='course-rating'>Rating: {course.rating}</p>
+              </div>
+              <div className="reviews">
+                {course.reviews.map(review => (
+                  <div key={review._id}>{review.user.name}: {review.commentBody}</div>
+                ))}
               </div>
             </div>
           )}

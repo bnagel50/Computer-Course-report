@@ -1,11 +1,15 @@
 {
     "reviews": [
     {
+            "courseId": "62d4eb0a5cd154008db4f3ac",
+            "userId": "62d4eb0a5cd154008db4f3a0",
             "name": "Austin Jones",
             "employment": "Yes",
             "comments": "It was a challenging course, but I learned a lot and found a job in the field. The material goes above and beyond to prepare you for the real world of coding." 
     },
     {
+        "courseId": "62d4eb0a5cd154008db4f3ac",
+            "userId": "62d4eb0a5cd154008db4f3a0",
             "name": "Justin Ames",
             "employment": "Yes",
             "comments": "Fantastic bootcamp, I learned everything needed to find a job quickly. Starting from little coding knowledge, I was able to learn many great skills." 
