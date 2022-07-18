@@ -1,15 +1,12 @@
 import React from "react";
-import "./Footer.css";
+import { Link } from "react-router-dom";
 
 const ContactUs = () => {
-  <div className="col">
-    <h1>Contact Us!</h1>
-    <ul className="list-unstyled">
-      <li>Htassassinboys@gmail.com</li>
-      <li>555-555-5555</li>
-      <li>Github.com/sweetbaby/boys</li>
-    </ul>
-  </div>;
+  return (
+    <div className="col">
+      <h1>Contact Us!</h1>
+    </div>
+  );
 };
 
 export default ContactUs;
