@@ -30,7 +30,7 @@ const WriteReview = ({ userId }) => {
 
     return (
         <div>
-          <h4>Write your review below!</h4>
+          <h4 class="header">Write your review below!</h4>
     
           {Auth.loggedIn() ? (
             <form
