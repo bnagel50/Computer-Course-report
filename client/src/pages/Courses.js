@@ -27,7 +27,7 @@ const Courses = () => {
           ) : (
             
             <div className="main-stuff">
-              {data.courses.map(course => (<div className="course-item card">
+              {data.courses.map(course => (<div key={course._id} className="course-item card">
                 <Link to={course._id} className='course-name' >{course.school}</Link>
                 <p className='course-curriculum'>Curriculum: {course.curriculum.join(', ')}</p>
                 <p className='course-cost'>Cost: ${course.cost}</p>
