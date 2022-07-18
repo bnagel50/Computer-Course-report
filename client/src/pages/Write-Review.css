@@ -13,7 +13,7 @@ input {
     border: 1px solid purple;
     margin: 10px;
     font-size: 18px;
-    /* text-transform: capitalize; */
+    text-transform: capitalize;
 }
 
 .pos-rel {
@@ -42,7 +42,7 @@ input {
 .reviewOption,
 .course {
     font-size: 20px;
-    /* text-transform: capitalize; */
+    text-transform: capitalize;
 }
 
 .reviewOption:hover {
