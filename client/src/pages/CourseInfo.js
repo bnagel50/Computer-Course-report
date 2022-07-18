@@ -11,8 +11,6 @@ const Course = () => {
 
   const { course = {} } = data;
 
-  console.log({ course })
-
 
   return (
     <main className='main-courses'>
@@ -36,14 +34,15 @@ const Course = () => {
               </div>
               <div className="reviews">
                 {course.reviews.map(review => (
-                <div>
+                <div key={review._id}>
+                  <div>{review._id}</div>
                   <div>{review.user.name}</div>
-                  <div key={review._id}>Experience: {review.experience}</div>
-                  <div key={review._id}>Instructors: {review.instructors}</div>
-                  <div key={review._id}>Curriculum: {review.curriculum}</div>
-                  <div key={review._id}>Job Assistance: {review.jobAssistance}</div>
-                  <div key={review._id}>Employment: {review.employment}</div>
-                  <div key={review._id}>Review: {review.commentBody}</div>
+                  <div>Experience: {review.experience}</div>
+                  <div>Instructors: {review.instructors}</div>
+                  <div>Curriculum: {review.curriculum}</div>
+                  <div>Job Assistance: {review.jobAssistance}</div>
+                  <div>Employment: {review.employment}</div>
+                  <div>Review: {review.commentBody}</div>
                 </div>
                 ))}
               </div>

@@ -70,7 +70,7 @@ const AutoComplete = ({ history }) => {
                 <div
                   onClick={() => onSchoolClick(course._id)}
                   className='option'
-                  key={i}
+                  key={course._id}
                   tabIndex='0'
                 >
                   <span>{course.school}</span>
