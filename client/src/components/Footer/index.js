@@ -29,11 +29,11 @@ function Footer() {
             {/* Column3 */}
             <div className="col">
               <h4>WELL ANOTHER COLUMN</h4>
-              <ui className="list-unstyled">
+              <ul className="list-unstyled">
                 <li>Place Holder</li>
                 <li>Place Holder</li>
                 <li>Place Holder</li>
-              </ui>
+              </ul>
             </div>
           </div>
           <hr />

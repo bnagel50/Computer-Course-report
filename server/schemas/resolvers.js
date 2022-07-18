@@ -42,6 +42,12 @@ const resolvers = {
     }
   },
 
+  Review: {
+    user: async (parent) => {
+      return User.findOne({ _id: parent.userId })
+    }
+  },
+
   Mutation: {
     addUser: async (parent, { name, email, password }) => {
       console.log('Made it here')

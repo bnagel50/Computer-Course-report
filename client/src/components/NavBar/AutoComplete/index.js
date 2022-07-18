@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom'
 
 import { useQuery } from '@apollo/client';
 import { QUERY_COURSES } from '../../../utils/queries';
@@ -8,22 +9,20 @@ import './index.css';
 // const testSchools = ['The Ohio State University', 'Ohio University', 'Miami', 'Toledo', 'Cincinasty'];
 
 
-const AutoComplete = () => {
+const AutoComplete = ({ history }) => {
   const [displaySchoolsList, setDisplaySchoolsList] = useState(false);
-  const [schools, setSchools] = useState([]);
+  const [courses, setCourses] = useState();
   const [currentSchool, setCurrentSchool] = useState('');
   const wrapperRef = useRef(null);
+  const navigate = useNavigate();
 
-  const { loading, data } = useQuery(QUERY_COURSES);
+  const { data } = useQuery(QUERY_COURSES);
+
+  if(data && !courses) {
+    setCourses(data.courses);
+  }
 
   useEffect(() => {
-    debugger
-    if (data) {
-      const CourseInfo = data.courses.map(course => course.school);
-    setSchools(CourseInfo);
-    }
-    // debugger
-
     window.addEventListener('mousedown', handleClickOutside);
     window.addEventListener('mouseover', handleClickOutside);
     
@@ -31,7 +30,7 @@ const AutoComplete = () => {
       window.removeEventListener('mousedown', handleClickOutside);
       window.removeEventListener('mouseover', handleClickOutside);
     };
-  });
+  }, [courses]);
 
   const handleClickOutside = event => {
     const { current: wrap } = wrapperRef;
@@ -40,9 +39,11 @@ const AutoComplete = () => {
     }
   };
 
-  const onSchoolClick = school => {
-    setCurrentSchool(school);
+  const onSchoolClick = courseId => {
+    //setCurrentSchool(school);
     setDisplaySchoolsList(false);
+    navigate(`/courses/${courseId}`)
+
   };
 
   const onSchoolChange = (e) => {
@@ -62,17 +63,17 @@ const AutoComplete = () => {
       />
       {displaySchoolsList && (
         <div className='autoContainer'>
-          {schools
-            .filter((s) => s.toLowerCase().indexOf(currentSchool.toLowerCase()) !== -1)
-            .map((value, i) => {
+          {courses
+            .filter((course) => course.school.toLowerCase().indexOf(currentSchool.toLowerCase()) !== -1)
+            .map((course, i) => {
               return (
                 <div
-                  onClick={() => onSchoolClick(value)}
+                  onClick={() => onSchoolClick(course._id)}
                   className='option'
                   key={i}
                   tabIndex='0'
                 >
-                  <span>{value}</span>
+                  <span>{course.school}</span>
                 </div>
               );
             })}

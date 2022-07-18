@@ -1,0 +1,53 @@
+
+[
+    {
+        "experience": 5,
+        "instructors": 4,
+        "curriculum": 5,
+        "jobAssistance": 5, 
+        "employment": "Yes",
+        "commentBody": "It was a challenging course, but I learned a lot and found a job in the field. The material goes above and beyond to prepare you for the real world of coding."
+    },
+    {
+        "experience": 5,
+        "instructors": 4,
+        "curriculum": 5,
+        "jobAssistance": 5,
+        "employment": "Yes",
+        "commentBody": "222222222222222222222" 
+    },
+    {
+        "experience": 5,
+        "instructors": 4,
+        "curriculum": 5,
+        "jobAssistance": 5,
+        "employment": "Yes",
+        "commentBody": "33333333333333333333333." 
+    },
+    {
+        "experience": 5,
+        "instructors": 4,
+        "curriculum": 5,
+        "jobAssistance": 5,
+        "employment": "Yes",
+        "commentBody": "4444444444444444444444" 
+    },
+    {
+        "experience": 5,
+        "instructors": 4,
+        "curriculum": 5,
+        "jobAssistance": 5,
+        "employment": "Yes",
+        "commentBody": "5555555555555555555555555555" 
+    },
+    {
+        "experience": 5,
+        "instructors": 4,
+        "curriculum": 5,
+        "jobAssistance": 5,
+        "employment": "Yes",
+        "commentBody": "66666666666666666666666666666" 
+    }
+]
+
+
