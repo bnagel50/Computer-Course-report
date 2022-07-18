@@ -30,6 +30,8 @@ import './App.css';
 import './components/NavBar/index'
 import NavigationBar from './components/NavBar'
 import Course from './pages/CourseInfo';
+import WriteReview from './pages/Write-Review';
+import ContactUs from './pages/ContactUs';
 
 
 
@@ -87,6 +89,14 @@ function App() {
           <Route
             path="/courses"
             element={<Courses />}
+          />
+            <Route
+            path="/write-review"
+            element={<WriteReview />}
+          />
+           <Route
+            path="/ContactUs"
+            element={<ContactUs />}
           />
            <Route
             path="/"
