@@ -61,18 +61,18 @@ const ReviewAutoComplete = ({ history }) => {
         onChange={event => onSchoolChange(event)}
       />
       {displaySchoolsList && (
-        <div className='autoContainer'>
+        <div className='reviewAutoContainer'>
           {courses
             .filter((course) => course.school.toLowerCase().indexOf(currentSchool.toLowerCase()) !== -1)
             .map((course, i) => {
               return (
                 <div
                   onClick={() => onSchoolClick(course._id)}
-                  className='option'
+                  className='reviewOption'
                   key={i}
                   tabIndex='0'
                 >
-                  <span>{course.school}</span>
+                  <p className='course'>{course.school}</p>
                 </div>
               );
             })}
