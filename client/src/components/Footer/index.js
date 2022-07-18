@@ -19,18 +19,16 @@ function Footer() {
             </div>
             {/* Column2 */}
             <div className="col">
-              <Link className="btn btn-lg btn-primary m-2" to="/contact-us">
-                Contact Us!
-              </Link>
+              <h4>Contact Us!</h4>
               <ul className="list-unstyled">
-                <li>Htassassinboys@gmail.com</li>
-                <li>555-555-5555</li>
-                <li>Github.com/sweetbaby/boys</li>
+                <li>Fake email</li>
+                <li>Fake Other Thing</li>
+                <li>More Fake stuff</li>
               </ul>
             </div>
             {/* Column3 */}
             <div className="col">
-              <h4>Another Column</h4>
+              <h4>WELL ANOTHER COLUMN</h4>
               <ui className="list-unstyled">
                 <li>Place Holder</li>
                 <li>Place Holder</li>

@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react';
 import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
   createHttpLink,
-} from "@apollo/client";
-import { setContext } from "@apollo/client/link/context";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+} from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // import Home from './pages/Home';
-import User from "./pages/Profile";
-import Signup from "./pages/Signup";
-import Login from "./pages/Login";
+import User from './pages/Profile';
+import Signup from './pages/Signup';
+import Login from './pages/Login';
 // import Header from './components/Header';
 
 // import Container from 'react-bootstrap/Container';
@@ -20,32 +20,31 @@ import Login from "./pages/Login";
 // import Button from 'react-bootstrap/Button';
 // import { Link } from 'react-router-dom';
 // import Footer from './components/Footer';
-import Footer from "./components/Footer";
-import LandingPage from "./components/LandingPage";
+import Footer from './components/Footer';
+import LandingPage from './components/LandingPage';
 // import PostCourseList from './components/CourseList';
-import Courses from "./pages/Courses";
-import "./App.css";
+import Courses from './pages/Courses';
+import './App.css';
 // import { QUERY_COURSES } from './utils/queries';
 // import './courses.css'
+import './components/NavBar/index'
+import NavigationBar from './components/NavBar'
+import Course from './pages/CourseInfo';
 
-import "./components/NavBar/index";
-import NavigationBar from "./components/NavBar";
-import Course from "./pages/Course";
-import ContactUs from "./pages/ContactUs";
 
 
 const httpLink = createHttpLink({
-  uri: "/graphql",
+  uri: '/graphql',
 });
 
 const authLink = setContext((_, { headers }) => {
   // get the authentication token from local storage if it exists
-  const token = localStorage.getItem("id_token");
+  const token = localStorage.getItem('id_token');
   // return the headers to the context so httpLink can read them
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : "",
+      authorization: token ? `Bearer ${token}` : '',
     },
   };
 });
@@ -59,19 +58,20 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <NavigationBar />
+      <NavigationBar />
+        
 
+        
         <Routes>
-          <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route
+            path="/login"
+            element={<Login />}
+          />
+          <Route
+            path="/signup"
+            element={<Signup />}
+          />
 
-          <Route path="/me" element={<User />} />
-          <Route path="/users/:userId" element={<User />} />
-          <Route path="/courseInfo" element={<Course />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="/" element={<LandingPage />} />
-        </Routes>
           <Route
             path="/me"
             element={<User />}
@@ -92,6 +92,8 @@ function App() {
             path="/"
             element={<LandingPage />} />
             </Routes>
+            
+         
         <Footer />
       </Router>
     </ApolloProvider>
@@ -99,3 +101,4 @@ function App() {
 }
 
 export default App;
+
