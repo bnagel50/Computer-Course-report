@@ -20,7 +20,12 @@ const NavigationBar = () => {
           >
           </Nav>
           <Nav.Link href="/courses" className='text-white'>Browse Courses</Nav.Link>
-          <Nav.Link href="/write-review" className='text-white'>Write Reviews</Nav.Link>
+          {Auth.loggedIn() ? (
+             <Nav.Link href="/write-review" className='text-white'>Write Reviews</Nav.Link>
+          ) : (
+            <Nav.Link href="/login" className='text-white'>Write Reviews</Nav.Link>
+          )}
+         
           <AutoComplete />
           {Auth.loggedIn() ? (
             <>
