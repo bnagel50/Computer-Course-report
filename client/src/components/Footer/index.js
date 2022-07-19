@@ -10,30 +10,31 @@ function Footer() {
           <div className="row">
             {/* Column1 */}
             <div className="col">
-              <h4>HT ASSASINS</h4>
+              <h4>NOBSBC</h4>
               <h1 className="list-unstyled">
-                <li>555-555-5555</li>
-                <li>Columbus, Ohio</li>
-                <li>123 Street South North</li>
+                <li>(614)-555-5555</li>
+                {/* <li>Columbus, Ohio</li>
+                <li>123 Street South North</li> */}
               </h1>
             </div>
             {/* Column2 */}
             <div className="col">
-              {/* <h4>Contact Us!</h4> */}
+              <h4>
               <Link to="/ContactUs" className='text-white'>Contact Us!</Link>
+              </h4>
               <ul className="list-unstyled">
-                <li>Fake email</li>
-                <li>Fake Other Thing</li>
-                <li>More Fake stuff</li>
+                <li>nobsbc1@gamil.com</li>
+                <li>Columbus, Ohio</li>
+                <li>123 Street South Nort</li>
               </ul>
             </div>
             {/* Column3 */}
             <div className="col">
-              <h4>WELL ANOTHER COLUMN</h4>
+              <h4>Download the App!</h4>
               <ul className="list-unstyled">
-                <li>Place Holder</li>
-                <li>Place Holder</li>
-                <li>Place Holder</li>
+                <li>Coming Soon!</li>
+                <li> Apple Store image</li>
+                <li>Google Play image</li>
               </ul>
             </div>
           </div>
