@@ -12,7 +12,7 @@ input {
     border: 1px solid purple;
     margin: 10px;
     font-size: 18px;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
 }
 
 .pos-rel {
@@ -41,7 +41,7 @@ input {
 .option,
 span {
     font-size: 28px;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
 }
 
 .option:hover {
