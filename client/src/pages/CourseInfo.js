@@ -17,7 +17,7 @@ const Course = () => {
       <div className="flex-row justify-center first-div">
         <div className="col-12 col-md-10 my-3 second-div">
           <div>
-            <h1>hello</h1>
+            <h1>{course.school} Reviews</h1>
           </div>
           {loading ? (
             <div>Loading...</div>
@@ -25,24 +25,28 @@ const Course = () => {
             <div className="main-stuff">
               <div className="course-item card">
               <p className='course-name'>Name: {course.school}</p>
+              <div className='col'>
                 <p className='course-curriculum'>Curriculum: {course.curriculum.join(', ')}</p>
                 <p className='course-cost'>Cost: ${course.cost}</p>
                 <p className='course-length'>Length: {course.length}-weeks</p>
                 <p className='course-location'>Location: {course.location}</p>
                 
                 <p className='course-rating'>Rating: {course.rating}</p>
+                </div>
               </div>
-              <div className="reviews">
+              <div className="reviews column">
                 {course.reviews.map(review => (
-                <div key={review._id}>
-                  <div>{review._id}</div>
-                  <div>{review.user.name}</div>
+                <div className='column1' key={review._id}>
+                  {/* <div>{review._id}</div> */}
+                  <div className='review-name'>{review.user.name}</div>
+                  <div className='col'>
                   <div>Experience: {review.experience}</div>
                   <div>Instructors: {review.instructors}</div>
                   <div>Curriculum: {review.curriculum}</div>
                   <div>Job Assistance: {review.jobAssistance}</div>
                   <div>Employment: {review.employment}</div>
                   <div>Review: {review.commentBody}</div>
+                  </div>
                 </div>
                 ))}
               </div>

@@ -29,12 +29,14 @@ const Courses = () => {
             <div className="main-stuff">
               {data.courses.map(course => (<div key={course._id} className="course-item card">
                 <Link to={course._id} className='course-name' >{course.school}</Link>
+                <div className='col'>
                 <p className='course-curriculum'>Curriculum: {course.curriculum.join(', ')}</p>
                 <p className='course-cost'>Cost: ${course.cost}</p>
                 <p className='course-length'>Length: {course.length}-weeks</p>
                 <p className='course-location'>Location: {course.location}</p>
                 
                 <p className='course-rating'>Rating: {course.rating}</p>
+                </div>
               </div>))}
             </div>
           )}

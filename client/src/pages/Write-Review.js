@@ -39,15 +39,19 @@ const WriteReview = ({ userId }) => {
     };
 
     return (
-        <div>
-          <h4 className="header">Write your review below!</h4>
+      <main className="main-log">
+        <div className='main-div'>
+          <div className='third-div'>
+          <h4 className="header">Write your review below ! 👇</h4>
+          <div className='second-div'>
     
           {Auth.loggedIn() ? (
             <form
               className="flex-row justify-center justify-space-between-md align-center"
               onSubmit={handleFormSubmit}
             >
-              <div className="col-12 col-lg-9">
+              <div className='stuff'>
+              <div className="col-12 col-lg-9" >
                 <CourseDropDown onChange={onChange} courseId={reviewInput.courseId} />
               </div>
               <div className="col-12 col-lg-9">
@@ -115,7 +119,7 @@ const WriteReview = ({ userId }) => {
               </div>
     
               <div className="col-12 col-lg-3">
-                <button className="btn btn-info btn-block py-3" type="submit">
+                <button className="btn btn-info btn-block py-3 btn-submit1" type="submit">
                   Submit Review!
                 </button>
               </div>
@@ -124,6 +128,7 @@ const WriteReview = ({ userId }) => {
                   {error.message}
                 </div>
               )}
+              </div>
             </form>
           ) : (
             <p>
@@ -131,7 +136,10 @@ const WriteReview = ({ userId }) => {
               <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
             </p>
           )}
+          </div>
+          </div>
         </div>
+        </main>
       );
     };
     

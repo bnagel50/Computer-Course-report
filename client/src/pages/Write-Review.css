@@ -1,58 +1,47 @@
+.main-div {
+    margin-bottom: 10px;
+    padding: 15px;
+    margin: 15px;
+    font-weight: bold;
+    text-align: center;
+}
 
-.auto-container {
+.header {
+    text-align: center;
+    padding: 15px;
+    padding-bottom: 50px;
+    margin: 15px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.btn-submit1 {
+    position: static;
+    text-align: center;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+    margin-top: 15px;
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 2px 17px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 2px 17px 3px rgba(0,0,0,0.5);
+    box-shadow: 0px 2px 17px 3px rgba(0,0,0,0.5);
+}
+
+.stuff {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-}
-
-input {
-    padding: 10px;
-    height: 20px;
-    width: 500px;
-    border: 1px solid purple;
-    margin: 10px;
-    font-size: 18px;
-    /* text-transform: capitalize; */
-}
-
-.pos-rel {
-    position: relative;
-}
-
-.reviewAutoContainer {
-    position: relative;
-    border-width: 0px 1px 1px 10px;
-    border-style: solid;
-    border-color: goldenrod;
-    background-color: whitesmoke;
-    right: 10px;
-    top: 33px;
-    width: 500px;
-}
-
-.option {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 500px;
-    padding: 5px;
-}
-
-.reviewOption,
-.course {
-    font-size: 20px;
-    /* text-transform: capitalize; */
-}
-
-.reviewOption:hover {
-    background-color: lightblue;
-}
-
-.flex-container {
-    display: flex;
-}
-
-.flex-column {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px 30px;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
