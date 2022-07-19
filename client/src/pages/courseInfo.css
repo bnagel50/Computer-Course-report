@@ -8,18 +8,12 @@
     padding: 15px;
     margin: 15px;
     font-weight: bold;
-    /* text-align: center; */
 }
 
 .card{
     -webkit-box-shadow: 0px 2px 17px 3px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 2px 17px 3px rgba(0,0,0,0.5);
     box-shadow: 0px 2px 17px 3px rgba(0,0,0,0.5);
-
-  /* -webkit-border-radius: 100px 0px 100px 0px;
-  -moz-border-radius: 100px 0px 100px 0px;
-  border-radius: 100px 0px 100px 0px;
-  background-color: white; */
 
     -webkit-border-radius: 25px 25px 25px 25px;
     -moz-border-radius: 25px 25px 25px 25px;
@@ -40,7 +34,6 @@ P tag courses
 
 */
 .course-name:hover{
-    /* color: white; */
     font-weight: bolder;
 }
 
@@ -53,22 +46,6 @@ P tag courses
    text-align: center;
 }
 
-.course-location{
-    
-}
-
-.course-curriculum{
-    /* text-align: center; */
-}
-
-.course-cost{
-    /* display: flex;
-    justify-content: flex-end; */
-}
-
-.course-length{
-
-}
 
 /* ######################################################## */
 
@@ -82,3 +59,5 @@ P tag courses
     display: flex;
     justify-content: center;
 }
+/* ################################################################# */
+

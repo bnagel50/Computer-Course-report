@@ -4,7 +4,7 @@
     padding: 15px;
     margin: 15px;
     font-weight: bold;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .card{
@@ -15,13 +15,15 @@
     -webkit-border-radius: 25px 25px 25px 25px;
     -moz-border-radius: 25px 25px 25px 25px;
     border-radius: 25px 25px 25px 25px;
-    border : solid 
+    border : solid ; 
+    
 }
 
 .main-courses{
     background-color: #D3FBD8;
     padding: 10px;
     margin: 10px;
+    
 }
 
 
@@ -31,8 +33,7 @@ P tag courses
 
 */
 .course-name:hover{
-    /* color: white; */
-    font-weight: bolder;
+    transform: scale(1.01);
 }
 
 .course-name{
@@ -44,32 +45,60 @@ P tag courses
    text-align: center;
 }
 
-/* .course-location{
-    
-} */
-
-/* .course-curriculum{
-    
-} */
-
-/* .course-cost{
-
-} */
-
-/* .course-length{
-
-} */
-
-/* ######################################################## */
-
 .main-stuff{
     padding: 10px;
     margin: 10px;
-    background-color: #D3FBD8
-;
+    background-color: #D3FBD8;
 }
 
 .first-div{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+}
+
+.col{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px 30px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+
+/* CourseInfo reviews stuff */
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.column1 {
+    margin-bottom: 10px;
+    background: #F3EBD6;
+    padding: 15px;
+    margin: 20px;
+    font-weight: bold;  
+
+    -webkit-box-shadow: 0px 2px 17px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 2px 17px 3px rgba(0,0,0,0.5);
+    box-shadow: 0px 2px 17px 3px rgba(0,0,0,0.5);
+
+    -webkit-border-top-right-radius: 50px;
+    -webkit-border-bottom-left-radius: 50px;
+    -moz-border-radius-topright: 50px;
+    -moz-border-radius-bottomleft: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+
+.review-name {
+    font-weight: bold;
+    padding: 15px;
+    margin: 15px;
+    font-weight: bold;
+    text-shadow: 0px 1px 1px #000000;
 }
