@@ -102,3 +102,15 @@ P tag courses
     font-weight: bold;
     text-shadow: 0px 1px 1px #000000;
 }
+
+.about {
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cost {
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+}
