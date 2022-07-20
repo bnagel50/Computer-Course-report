@@ -23,9 +23,9 @@ function Footer() {
               <Link to="/ContactUs" className='text-white'>Contact Us!</Link>
               </h4>
               <ul className="list-unstyled">
-                <li>nobsbc1@gamil.com</li>
+                <li>nobsbc1@gmail.com</li>
                 <li>Columbus, Ohio</li>
-                <li>123 Street South Nort</li>
+                <li>123 Nathan Russell Street</li>
               </ul>
             </div>
             {/* Column3 */}
@@ -33,8 +33,8 @@ function Footer() {
               <h4>Download the App!</h4>
               <ul className="list-unstyled">
                 <li>Coming Soon!</li>
-                <li> Apple Store image</li>
-                <li>Google Play image</li>
+                <li> Apple Store</li>
+                <li>Google Play</li>
               </ul>
             </div>
           </div>
