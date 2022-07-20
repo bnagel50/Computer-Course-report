@@ -6,12 +6,13 @@
 }
 
 input {
-    padding: 10px;
+    padding: 15px;
     height: 20px;
-    width: 500px;
-    border: 1px solid purple;
+    width: 170px;
+    border: 1px solid grey;
     margin: 10px;
     font-size: 18px;
+    border-radius: 5px;
     /* text-transform: capitalize; */
 }
 
@@ -23,7 +24,7 @@ input {
     position: absolute;
     border-width: 0px 1px 1px 1px;
     border-style: solid;
-    border-color: goldenrod;
+    border-color: black;
     background-color: whitesmoke;
     right: 10px;
     top: 33px;
@@ -40,12 +41,12 @@ input {
 
 .option,
 span {
-    font-size: 28px;
+    font-size: 25px;
     /* text-transform: capitalize; */
 }
 
 .option:hover {
-    background-color: lightblue;
+    background-color: #D3FBD8;
 }
 
 .flex-container {
@@ -55,3 +56,4 @@ span {
 .flex-column {
     flex-direction: column;
 }
+
