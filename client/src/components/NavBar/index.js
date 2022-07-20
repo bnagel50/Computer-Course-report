@@ -9,7 +9,7 @@ import Auth from '../../utils/auth'
 const NavigationBar = () => {
   return (
     <div className="flex-column justify-flex-start min-100-vh">
-      <Navbar fixed='top' bg="dark" variant="dark navbar-div">
+      <Navbar fixed='top' bg="dark" variant="dark navbar-div" expand="lg">
         <Navbar.Brand href="/" className='py-3 p-5'>NO BS BC</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">

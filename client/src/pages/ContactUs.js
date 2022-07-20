@@ -59,9 +59,7 @@ export default function Contact() {
               controlId="exampleForm.ControlTextarea1"
             >
               <Form.Label>
-                Tell us what Courses you Want us to Add! <br></br> Lorem ipsum
-                dolor sit amet, consectetur adipiscing elit. Aliquam sapien
-                ante, egestas bibendu
+                Feel free to contact us, and let us know if there is a course you want to add! <br></br>
               </Form.Label>
               <Form.Control name="message" as="textarea" rows={3} />
             </Form.Group>
