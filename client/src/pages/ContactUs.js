@@ -5,26 +5,7 @@ import Form from "react-bootstrap/Form";
 export default function Contact() {
   const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_3fmoubx",
-        "template_pgbaa1u",
-        form.current,
-        "PU5YCE4cQQ57L6iGI"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    e.target.reset();
-  };
 
   return (
     <main className="flex-row justify-center mb-4 main-log">
