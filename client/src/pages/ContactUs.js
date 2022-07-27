@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import emailjs from "emailjs-com";
+// import emailjs from "emailjs-com";
 import Form from "react-bootstrap/Form";
 
 export default function Contact() {
