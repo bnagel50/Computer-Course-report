@@ -12,7 +12,7 @@ export default function Contact() {
       <div className="col-12 col-lg-10 first-div">
         <div className="text-stuff">
           <h1>GET IN TOUCH WITH US 👇</h1>
-          <Form ref={form} onSubmit={sendEmail} id="contact-form">
+          <Form ref={form} id="contact-form">
             <Form.Group
               name="name"
               className="mb-3"
